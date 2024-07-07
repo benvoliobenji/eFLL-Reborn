@@ -4,4 +4,49 @@
 uml/*
 .DS_Store
 .vscode
-*.txt
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+!external/pcan_basic_api/Win32/PCANBasic.dll
+!external/pcan_basic_api/x64/PCANBasic.dll
+*.exe
+*.o
+*.so
+
+# CMake #
+#########
+build*/
+out*/
+CMakeUserPresets.json
+
+# User files #
+##############
+*.user
+
+# MSVC and Qt
+#############
+*.VC.db
+*.VC.opendb
+.vs/
+Debug/
+Release/
+GeneratedFiles/
+
+# Doxygen #
+###########
+docs/html
+
+# VSCode files
+/**/.vscode
+!/**/.vscode/launch.json
+!/**/.vscode/extensions.json
+
+# Excel temporary
+/**/~$*.xlsx
+
+# PyTest
+/**/__pycache__
+/**/.pytest_cache

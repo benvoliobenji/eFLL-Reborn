@@ -1,0 +1,79 @@
+# This file is written for ClangFormat 16.0.0 or higher.
+
+Language: Cpp
+BasedOnStyle: Google
+
+IndentWidth: 4
+
+# Brace wrapping:
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+  AfterCaseLabel: true
+  AfterExternBlock: true
+  BeforeLambdaBody: true
+
+# Removed until we have support for LLVM version that supports this (>= 16.0.6)
+#IntegerLiteralSeparator:
+#  Binary: 4
+#  BinaryMinDigits: 8
+#  Decimal: 3
+#  DecimalMinDigits: 6
+#  Hex: 8
+#  HexMinDigits: 8
+
+# Misc other options
+InsertNewlineAtEOF: true # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#insertnewlineateof
+IndentAccessModifiers: false # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#indentaccessmodifiers
+AccessModifierOffset: -2 # The extra indent or outdent of access modifiers, e.g. public, https://clang.llvm.org/docs/ClangFormatStyleOptions.html#accessmodifieroffset
+AlignAfterOpenBracket: Align # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#alignafteropenbracket
+AlignConsecutiveDeclarations: # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#alignconsecutivedeclarations
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+BinPackParameters: false
+BinPackArguments: true
+AlignOperands: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#allowshortfunctionsonasingleline
+AllowShortLoopsOnASingleLine: false # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#allowshortloopsonasingleline
+ColumnLimit: 120 # Line width limit, how many characters wide before formatting by length, https://clang.llvm.org/docs/ClangFormatStyleOptions.html#columnlimit
+DerivePointerAlignment: false # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#derivepointeralignment
+PointerAlignment: Left # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#pointeralignment
+SortIncludes: true # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#sortincludes
+NamespaceIndentation: All # None, Inner, All. Add a tab indent for each namespace, https://clang.llvm.org/docs/ClangFormatStyleOptions.html#namespaceindentation
+MaxEmptyLinesToKeep: 2 # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#maxemptylinestokeep
+
+# Leave Doxygen directives alone
+CommentPragmas: '^(!? +\\|!<)'
+LineEnding: DeriveLF
+
+PackConstructorInitializers: Never # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#packconstructorinitializers
+BreakConstructorInitializers: AfterColon # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#breakconstructorinitializers

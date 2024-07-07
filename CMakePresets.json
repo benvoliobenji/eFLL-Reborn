@@ -1,0 +1,158 @@
+{
+  "version": 7,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 27,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "CMAKE_VERBOSE_MAKEFILE": false,
+        "CMAKE_POLICY_DEFAULT_CMP0123": "NEW",
+        "eFLL_REBORN_BUILD_EXAMPLES": false,
+        "eFLL_REBORN_BUILD_TESTS": false,
+        "eFLL_REBORN_BUILD_DOCS": false,
+        "eFLL_REBORN_ENABLE_CLANG_TIDY": false,
+        "eFLL_REBORN_ENABLE_CODE_COVERAGE": false
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "intelliSenseMode": "linux-gcc-arm"
+        }
+      }
+    },
+    {
+      "name": "base-host",
+      "hidden": true,
+      "description": "Base configuration for host development",
+      "inherits": "base",
+      "cacheVariables": {
+        "eFLL_BUILD_HOSTED": true,
+        "eFLL_REBORN_BUILD_TESTS": true
+      }
+    },
+    {
+      "name": "base-host-clang",
+      "hidden": true,
+      "description": "Base configuration for host development with Clang/LLVM",
+      "inherits": "base-host",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install",
+        "eFLL_REBORN_ENABLE_CODE_COVERAGE": false
+      }
+    },
+    {
+      "name": "base-target",
+      "hidden": true,
+      "description": "On-target configuration baseline",
+      "inherits": "base",
+      "cacheVariables": {
+        "eFLL_REBORN_BUILD_EMBEDDED": true,
+        "eFLL_REBORN_BUILD_EXAMPLES": true,
+        "TOOLCHAIN_DISABLE_RTTI": true,
+        "TOOLCHAIN_DISABLE_EXCEPTIONS": true,
+        "TOOLCHAIN_ENABLE_LTO": false
+      }
+    },
+    {
+      "name": "target-gcc",
+      "hidden": true,
+      "description": "On-target GCC baseline",
+      "inherits": "base-target",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/gcc/gcc_arm_m4f_toolchain.cmake",
+      "cacheVariables": {
+        "TOOLCHAIN_OPTIMIZATION_FLAG": "-Og"
+      }
+    },
+    {
+      "name": "arm32-stm32u575-none-gcc",
+      "hidden": false,
+      "displayName": "STM32U575/GCC",
+      "description": "STM32U575 development with GCC",
+      "inherits": "target-gcc"
+    },
+    {
+      "name": "x64-pc-windows-msvc",
+      "displayName": "Windows/MSVC",
+      "description": "Hosted development with MSVC",
+      "inherits": "base-host",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/msvc/Windows.MSVC.toolchain.cmake",
+      "cacheVariables": {
+        "eFLL_REBORN_CODE_COVERAGE": false,
+        "eFLL_REBORN_ENABLE_CLANG_TIDY": false
+      }
+    },
+    {
+      "name": "x64-pc-windows-msvc-clangtidy",
+      "displayName": "Windows/MSVC + Clang-Tidy",
+      "description": "Hosted development with MSVC and Clang-Tidy",
+      "inherits": "x64-pc-windows-msvc",
+      "cacheVariables": {
+        "eFLL_REBORN_ENABLE_CODE_COVERAGE": true,
+        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+      }
+    },
+    {
+      "name": "x64-pc-windows-clang",
+      "displayName": "Windows/Clang",
+      "description": "Hosted development with Clang",
+      "inherits": "base-host-clang",
+      "cacheVariables": {
+        "eFLL_REBORN_CODE_COVERAGE": true
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "x64-unknown-unix-clang",
+      "displayName": "*nix/Clang",
+      "description": "Hosted development with Clang, on a Unix-ish system",
+      "inherits": "base-host-clang",
+      "cacheVariables": {
+        "eFLL_REBORN_CODE_COVERAGE": false
+      },
+      "condition": {
+        "type": "notEquals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "x64-pc-windows-clang-clangtidy",
+      "displayName": "Windows/Clang + Clang-Tidy",
+      "description": "Hosted development with Clang and Clang-Tidy",
+      "inherits": "x64-pc-windows-clang",
+      "cacheVariables": {
+        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+      }
+    },
+    {
+      "name": "x64-unknown-unix-clang-clangtidy",
+      "displayName": "*nix/Clang + Clang-Tidy",
+      "description": "Hosted development with Clang and Clang-Tidy",
+      "inherits": "x64-unknown-unix-clang",
+      "cacheVariables": {
+        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+      }
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "MSVC Debug Test",
+      "configurePreset": "msvc",
+      "configuration": "Debug"
+    }
+  ]
+}
