@@ -12,7 +12,7 @@ Checks: >
   # -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
   modernize-*,
   -modernize-use-std-print,
-  modernize-use-trailing-return-type,
+  -modernize-use-trailing-return-type,
   # -modernize-use-nodiscard,
   # -modernize-avoid-c-arrays,
   readability-*,
@@ -22,7 +22,6 @@ WarningsAsErrors: ""
 
 HeaderFilterRegex: '.*(src|include)[\/\\][\/\\].+\.h'
 
-AnalyzeTemporaryDtors: false
 FormatStyle: file
 CheckOptions:
   # cppcoreguidelines

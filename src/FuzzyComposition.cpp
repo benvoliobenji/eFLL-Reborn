@@ -10,8 +10,10 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyComposition.h"
+#include "eFLL/FuzzyComposition.h"
+
 #include <math.h>
+
 
 // CONTRUCTORS
 FuzzyComposition::FuzzyComposition()
@@ -29,18 +31,18 @@ FuzzyComposition::~FuzzyComposition()
 bool FuzzyComposition::addPoint(float point, float pertinence)
 {
     // auxiliary variable to handle the operation
-    pointsArray *newOne;
+    pointsArray* newOne;
     // allocating in memory
-    if ((newOne = (pointsArray *)malloc(sizeof(pointsArray))) == NULL)
+    if ((newOne = (pointsArray*)malloc(sizeof(pointsArray))) == NULL)
     {
         // return false if in out of memory
         return false;
     }
     // populate the struct
-    newOne->previous = NULL;
-    newOne->point = point;
+    newOne->previous   = NULL;
+    newOne->point      = point;
     newOne->pertinence = pertinence;
-    newOne->next = NULL;
+    newOne->next       = NULL;
     // if it is the first pointsArray, set it as the head
     if (this->points == NULL)
     {
@@ -49,7 +51,7 @@ bool FuzzyComposition::addPoint(float point, float pertinence)
     else
     {
         // auxiliary variable to handle the operation
-        pointsArray *aux = this->points;
+        pointsArray* aux = this->points;
         // find the last element of the array
         while (aux != NULL)
         {
@@ -57,7 +59,7 @@ bool FuzzyComposition::addPoint(float point, float pertinence)
             {
                 // make the relations between them
                 newOne->previous = aux;
-                aux->next = newOne;
+                aux->next        = newOne;
                 return true;
             }
             aux = aux->next;
@@ -70,7 +72,7 @@ bool FuzzyComposition::addPoint(float point, float pertinence)
 bool FuzzyComposition::checkPoint(float point, float pertinence)
 {
     // auxiliary variable to handle the operation
-    pointsArray *aux = this->points;
+    pointsArray* aux = this->points;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {
@@ -88,12 +90,12 @@ bool FuzzyComposition::checkPoint(float point, float pertinence)
 bool FuzzyComposition::build()
 {
     // auxiliary variable to handle the operation, instantiate with the first element from array
-    pointsArray *aux = this->points;
+    pointsArray* aux = this->points;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {
         // another auxiliary variable to handle the operation
-        pointsArray *temp = aux;
+        pointsArray* temp = aux;
         // while not in the beginning of the array, iterate
         while (temp->previous != NULL)
         {
@@ -126,13 +128,13 @@ bool FuzzyComposition::build()
 float FuzzyComposition::calculate()
 {
     // auxiliary variable to handle the operation, instantiate with the first element from array
-    pointsArray *aux = this->points;
-    float numerator = 0.0;
+    pointsArray* aux  = this->points;
+    float numerator   = 0.0;
     float denominator = 0.0;
     // while not in the end of the array, iterate
     while (aux != NULL && aux->next != NULL)
     {
-        float area = 0.0;
+        float area   = 0.0;
         float middle = 0.0;
         // if it is a singleton
         if (aux->pertinence != aux->next->pertinence && aux->point == aux->next->point)
@@ -140,7 +142,7 @@ float FuzzyComposition::calculate()
             // enter in all points of singleton, but calculate only once
             if (aux->pertinence > 0.0)
             {
-                area = aux->pertinence;
+                area   = aux->pertinence;
                 middle = aux->point;
             }
         }
@@ -169,13 +171,13 @@ float FuzzyComposition::calculate()
         // else if a square (Not properly a membership function)
         else if ((aux->pertinence > 0.0 && aux->next->pertinence > 0.0) && aux->pertinence == aux->next->pertinence)
         {
-            area = (aux->next->point - aux->point) * aux->pertinence;
+            area   = (aux->next->point - aux->point) * aux->pertinence;
             middle = ((aux->next->point - aux->point) / 2.0) + aux->point;
         }
         // else if a trapeze (Not properly a membership function)
         else if ((aux->pertinence > 0.0 && aux->next->pertinence > 0.0) && aux->pertinence != aux->next->pertinence)
         {
-            area = ((aux->pertinence + aux->next->pertinence) / 2.0) * (aux->next->point - aux->point);
+            area   = ((aux->pertinence + aux->next->pertinence) / 2.0) * (aux->next->point - aux->point);
             middle = ((aux->next->point - aux->point) / 2.0) + aux->point;
         }
         numerator += middle * area;
@@ -209,12 +211,12 @@ int FuzzyComposition::countPoints()
     // variable to hold the count
     int count = 0;
     // auxiliary variable to handle the operation
-    pointsArray *aux = this->points;
+    pointsArray* aux = this->points;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {
         count = count + 1;
-        aux = aux->next;
+        aux   = aux->next;
     }
     return count;
 }
@@ -222,7 +224,7 @@ int FuzzyComposition::countPoints()
 // PRIVATE METHODS
 
 // Method to recursively clean all pointsArray structs from memory
-void FuzzyComposition::cleanPoints(pointsArray *aux)
+void FuzzyComposition::cleanPoints(pointsArray* aux)
 {
     if (aux != NULL)
     {
@@ -232,8 +234,12 @@ void FuzzyComposition::cleanPoints(pointsArray *aux)
     }
 }
 
-// Method to search intersection between two segments, if found, create a new pointsArray (in found intersection) and remove not necessary ones
-bool FuzzyComposition::rebuild(pointsArray *aSegmentBegin, pointsArray *aSegmentEnd, pointsArray *bSegmentBegin, pointsArray *bSegmentEnd)
+// Method to search intersection between two segments, if found, create a new pointsArray (in found intersection) and
+// remove not necessary ones
+bool FuzzyComposition::rebuild(pointsArray* aSegmentBegin,
+                               pointsArray* aSegmentEnd,
+                               pointsArray* bSegmentBegin,
+                               pointsArray* bSegmentEnd)
 {
     // create a reference for each point
     float x1 = aSegmentBegin->point;
@@ -245,7 +251,7 @@ bool FuzzyComposition::rebuild(pointsArray *aSegmentBegin, pointsArray *aSegment
     float x4 = bSegmentEnd->point;
     float y4 = bSegmentEnd->pertinence;
     // calculate the denominator and numerator
-    float denom = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
+    float denom  = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
     float numera = (x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3);
     float numerb = (x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3);
     // if negative, convert to positive
@@ -253,7 +259,8 @@ bool FuzzyComposition::rebuild(pointsArray *aSegmentBegin, pointsArray *aSegment
     {
         denom *= -1.0;
     }
-    // If the denominator is zero or close to it, it means that the lines are parallels, so return false for intersection
+    // If the denominator is zero or close to it, it means that the lines are parallels, so return false for
+    // intersection
     if (denom < EPSILON_VALUE)
     {
         // return false for intersection
@@ -281,31 +288,31 @@ bool FuzzyComposition::rebuild(pointsArray *aSegmentBegin, pointsArray *aSegment
     {
         // we found an intersection
         // auxiliary variable to handle the operation
-        pointsArray *aux;
+        pointsArray* aux;
         // allocating in memory
-        if ((aux = (pointsArray *)malloc(sizeof(pointsArray))) == NULL)
+        if ((aux = (pointsArray*)malloc(sizeof(pointsArray))) == NULL)
         {
             // return false if in out of memory
             return false;
         }
         // calculate the point (y) and its pertinence (y) for the new element (pointsArray)
-        aux->previous = bSegmentEnd;
-        aux->point = x1 + mua * (x2 - x1);
+        aux->previous   = bSegmentEnd;
+        aux->point      = x1 + mua * (x2 - x1);
         aux->pertinence = y1 + mua * (y2 - y1);
-        aux->next = aSegmentEnd;
+        aux->next       = aSegmentEnd;
         // changing pointsArray to accomplish with new state
-        aSegmentBegin->next = aux;
-        aSegmentEnd->previous = aux;
+        aSegmentBegin->next     = aux;
+        aSegmentEnd->previous   = aux;
         bSegmentBegin->previous = aux;
-        bSegmentEnd->next = aux;
+        bSegmentEnd->next       = aux;
         // initiate a proccess of remotion of not needed pointsArray
         // some variables to help in this proccess, the start pointsArray
-        pointsArray *temp = bSegmentBegin;
+        pointsArray* temp = bSegmentBegin;
         // do, while
         do
         {
             // hold next
-            pointsArray *excl = temp->next;
+            pointsArray* excl = temp->next;
             // remove it from array
             this->rmvPoint(temp);
             // set new current
@@ -322,7 +329,7 @@ bool FuzzyComposition::rebuild(pointsArray *aSegmentBegin, pointsArray *aSegment
 }
 
 // Function to remove (deallocate) some pointsArray
-bool FuzzyComposition::rmvPoint(pointsArray *point)
+bool FuzzyComposition::rmvPoint(pointsArray* point)
 {
     if (point != NULL)
     {

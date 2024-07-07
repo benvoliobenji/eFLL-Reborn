@@ -10,15 +10,17 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyInput.h"
+#include "eFLL/FuzzyInput.h"
 
 // CONTRUCTORS
-FuzzyInput::FuzzyInput() : FuzzyIO()
+FuzzyInput::FuzzyInput() :
+    FuzzyIO()
 {
     // no custom construction, using the father (FuzzyIO) constructor
 }
 
-FuzzyInput::FuzzyInput(int index) : FuzzyIO(index)
+FuzzyInput::FuzzyInput(int index) :
+    FuzzyIO(index)
 {
     // no custom construction, using the father (FuzzyIO) constructor
 }
@@ -35,7 +37,7 @@ FuzzyInput::~FuzzyInput()
 bool FuzzyInput::calculateFuzzySetPertinences()
 {
     // auxiliary variable to handle the operation
-    fuzzySetArray *aux = this->fuzzySets;
+    fuzzySetArray* aux = this->fuzzySets;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {

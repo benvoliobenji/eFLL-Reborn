@@ -32,11 +32,16 @@ function(add_unit_test target_name)
     set_target_properties(${target_name} PROPERTIES CXX_STANDARD 23 FOLDER tests)
     gtest_discover_tests(${target_name} EXTRA_ARGS "--gtest_output=xml:${TEST_BIN_DIR}/test-results/")
 
-    if(ENABLE_CLANG_TIDY)
-        target_setup_clang_tidy(${target_name})
+    if(eFLL_ENABLE_CLANG_TIDY)
+        setup_clang_tidy(${target_name})
     endif()
 
     target_clangformat_setup(${target_name})
+
+    if(eFLL_ENABLE_CODE_COVERAGE)
+        # Append each test exe for coverage analysis to test against our main app
+        target_code_coverage(${target_name} AUTO ALL)
+    endif()
 endfunction()
 
 add_unit_test(fuzzy_test FuzzyTest.cpp)

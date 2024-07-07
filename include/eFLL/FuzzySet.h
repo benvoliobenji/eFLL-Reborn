@@ -15,26 +15,26 @@
 
 class FuzzySet
 {
-public:
-  // CONTRUCTORS
-  FuzzySet();
-  FuzzySet(float a, float b, float c, float d);
-  // PUBLIC METHODS
-  float getPointA();
-  float getPointB();
-  float getPointC();
-  float getPointD();
-  bool calculatePertinence(float crispValue);
-  void setPertinence(float pertinence);
-  float getPertinence();
-  void reset();
+  public:
+    // CONTRUCTORS
+    FuzzySet();
+    FuzzySet(float a, float b, float c, float d);
+    // PUBLIC METHODS
+    float getPointA();
+    float getPointB();
+    float getPointC();
+    float getPointD();
+    bool calculatePertinence(float crispValue);
+    void setPertinence(float pertinence);
+    float getPertinence();
+    void reset();
 
-private:
-  // PRIVATE VARIABLES
-  float a;
-  float b;
-  float c;
-  float d;
-  float pertinence;
+  private:
+    // PRIVATE VARIABLES
+    float a;
+    float b;
+    float c;
+    float d;
+    float pertinence;
 };
 #endif

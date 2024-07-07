@@ -10,17 +10,17 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyRule.h"
+#include "eFLL/FuzzyRule.h"
 
 // CONTRUCTORS
 FuzzyRule::FuzzyRule()
 {
 }
 
-FuzzyRule::FuzzyRule(int index, FuzzyRuleAntecedent *fuzzyRuleAntecedent, FuzzyRuleConsequent *fuzzyRuleConsequent)
+FuzzyRule::FuzzyRule(int index, FuzzyRuleAntecedent* fuzzyRuleAntecedent, FuzzyRuleConsequent* fuzzyRuleConsequent)
 {
-    this->index = index;
-    this->fired = false;
+    this->index               = index;
+    this->fired               = false;
     this->fuzzyRuleAntecedent = fuzzyRuleAntecedent;
     this->fuzzyRuleConsequent = fuzzyRuleConsequent;
 }

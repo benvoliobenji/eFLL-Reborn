@@ -10,7 +10,7 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzySet.h"
+#include "eFLL/FuzzySet.h"
 
 // CONTRUCTORS
 FuzzySet::FuzzySet()
@@ -19,10 +19,10 @@ FuzzySet::FuzzySet()
 
 FuzzySet::FuzzySet(float a, float b, float c, float d)
 {
-    this->a = a;
-    this->b = b;
-    this->c = c;
-    this->d = d;
+    this->a          = a;
+    this->b          = b;
+    this->c          = c;
+    this->d          = d;
     this->pertinence = 0.0;
 }
 
@@ -112,7 +112,8 @@ bool FuzzySet::calculatePertinence(float crispValue)
 // Method to set the value of pertinence
 void FuzzySet::setPertinence(float pertinence)
 {
-    // check if the new pertinence is bigger then the current value because it can be called more then once by different FuzzyRuleConsequent
+    // check if the new pertinence is bigger then the current value because it can be called more then once by different
+    // FuzzyRuleConsequent
     if (this->pertinence < pertinence)
     {
         this->pertinence = pertinence;

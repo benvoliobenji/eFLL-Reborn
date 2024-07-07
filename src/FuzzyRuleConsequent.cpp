@@ -10,7 +10,7 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyRuleConsequent.h"
+#include "eFLL/FuzzyRuleConsequent.h"
 
 // CONTRUCTORS
 FuzzyRuleConsequent::FuzzyRuleConsequent()
@@ -27,19 +27,19 @@ FuzzyRuleConsequent::~FuzzyRuleConsequent()
 // PUBLIC METHODS
 
 // Method to include a new FuzzySet (for Output) into FuzzyRuleConsequent
-bool FuzzyRuleConsequent::addOutput(FuzzySet *fuzzySet)
+bool FuzzyRuleConsequent::addOutput(FuzzySet* fuzzySet)
 {
     // auxiliary variable to handle the operation
-    fuzzySetOutputArray *newOne;
+    fuzzySetOutputArray* newOne;
     // allocating in memory
-    if ((newOne = (fuzzySetOutputArray *)malloc(sizeof(fuzzySetOutputArray))) == NULL)
+    if ((newOne = (fuzzySetOutputArray*)malloc(sizeof(fuzzySetOutputArray))) == NULL)
     {
         // return false if in out of memory
         return false;
     }
     // building the object
     newOne->fuzzySet = fuzzySet;
-    newOne->next = NULL;
+    newOne->next     = NULL;
     // if it is the first FuzzySet (for Output), set it as the head
     if (this->fuzzySetOutputs == NULL)
     {
@@ -48,7 +48,7 @@ bool FuzzyRuleConsequent::addOutput(FuzzySet *fuzzySet)
     else
     {
         // auxiliary variable to handle the operation
-        fuzzySetOutputArray *aux = this->fuzzySetOutputs;
+        fuzzySetOutputArray* aux = this->fuzzySetOutputs;
         // find the last element of the array
         while (aux != NULL)
         {
@@ -68,7 +68,7 @@ bool FuzzyRuleConsequent::addOutput(FuzzySet *fuzzySet)
 bool FuzzyRuleConsequent::evaluate(float power)
 {
     // auxiliary variable to handle the operation
-    fuzzySetOutputArray *aux = this->fuzzySetOutputs;
+    fuzzySetOutputArray* aux = this->fuzzySetOutputs;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {
@@ -82,7 +82,7 @@ bool FuzzyRuleConsequent::evaluate(float power)
 // PRIVATE METHODS
 
 // Method to recursively clean all fuzzySetOutputArray from memory
-void FuzzyRuleConsequent::cleanFuzzySets(fuzzySetOutputArray *aux)
+void FuzzyRuleConsequent::cleanFuzzySets(fuzzySetOutputArray* aux)
 {
     if (aux != NULL)
     {
