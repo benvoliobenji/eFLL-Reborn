@@ -16,11 +16,11 @@
         "CMAKE_EXPORT_COMPILE_COMMANDS": true,
         "CMAKE_VERBOSE_MAKEFILE": false,
         "CMAKE_POLICY_DEFAULT_CMP0123": "NEW",
-        "eFLL_REBORN_BUILD_EXAMPLES": false,
-        "eFLL_REBORN_BUILD_TESTS": false,
-        "eFLL_REBORN_BUILD_DOCS": false,
-        "eFLL_REBORN_ENABLE_CLANG_TIDY": false,
-        "eFLL_REBORN_ENABLE_CODE_COVERAGE": false
+        "eFLL_BUILD_EXAMPLES": false,
+        "eFLL_BUILD_TESTS": false,
+        "eFLL_BUILD_DOCS": false,
+        "eFLL_ENABLE_CLANG_TIDY": false,
+        "eFLL_ENABLE_CODE_COVERAGE": false
       },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
@@ -35,7 +35,7 @@
       "inherits": "base",
       "cacheVariables": {
         "eFLL_BUILD_HOSTED": true,
-        "eFLL_REBORN_BUILD_TESTS": true
+        "eFLL_BUILD_TESTS": true
       }
     },
     {
@@ -47,7 +47,7 @@
         "CMAKE_CXX_COMPILER": "clang++",
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install",
-        "eFLL_REBORN_ENABLE_CODE_COVERAGE": false
+        "eFLL_ENABLE_CODE_COVERAGE": false
       }
     },
     {
@@ -56,8 +56,8 @@
       "description": "On-target configuration baseline",
       "inherits": "base",
       "cacheVariables": {
-        "eFLL_REBORN_BUILD_EMBEDDED": true,
-        "eFLL_REBORN_BUILD_EXAMPLES": true,
+        "eFLL_BUILD_EMBEDDED": true,
+        "eFLL_BUILD_EXAMPLES": true,
         "TOOLCHAIN_DISABLE_RTTI": true,
         "TOOLCHAIN_DISABLE_EXCEPTIONS": true,
         "TOOLCHAIN_ENABLE_LTO": false
@@ -87,8 +87,8 @@
       "inherits": "base-host",
       "toolchainFile": "${sourceDir}/cmake/toolchains/msvc/Windows.MSVC.toolchain.cmake",
       "cacheVariables": {
-        "eFLL_REBORN_CODE_COVERAGE": false,
-        "eFLL_REBORN_ENABLE_CLANG_TIDY": false
+        "eFLL_ENABLE_CODE_COVERAGE": false,
+        "eFLL_ENABLE_CLANG_TIDY": false
       }
     },
     {
@@ -97,8 +97,8 @@
       "description": "Hosted development with MSVC and Clang-Tidy",
       "inherits": "x64-pc-windows-msvc",
       "cacheVariables": {
-        "eFLL_REBORN_ENABLE_CODE_COVERAGE": true,
-        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+        "eFLL_ENABLE_CODE_COVERAGE": true,
+        "eFLL_ENABLE_CLANG_TIDY": true
       }
     },
     {
@@ -107,7 +107,7 @@
       "description": "Hosted development with Clang",
       "inherits": "base-host-clang",
       "cacheVariables": {
-        "eFLL_REBORN_CODE_COVERAGE": true
+        "eFLL_ENABLE_CODE_COVERAGE": true
       },
       "condition": {
         "type": "equals",
@@ -121,7 +121,7 @@
       "description": "Hosted development with Clang, on a Unix-ish system",
       "inherits": "base-host-clang",
       "cacheVariables": {
-        "eFLL_REBORN_CODE_COVERAGE": false
+        "eFLL_ENABLE_CODE_COVERAGE": false
       },
       "condition": {
         "type": "notEquals",
@@ -135,7 +135,7 @@
       "description": "Hosted development with Clang and Clang-Tidy",
       "inherits": "x64-pc-windows-clang",
       "cacheVariables": {
-        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+        "eFLL_ENABLE_CLANG_TIDY": true
       }
     },
     {
@@ -144,15 +144,26 @@
       "description": "Hosted development with Clang and Clang-Tidy",
       "inherits": "x64-unknown-unix-clang",
       "cacheVariables": {
-        "eFLL_REBORN_ENABLE_CLANG_TIDY": true
+        "eFLL_ENABLE_CLANG_TIDY": true
       }
     }
   ],
   "testPresets": [
     {
-      "name": "MSVC Debug Test",
-      "configurePreset": "msvc",
-      "configuration": "Debug"
+      "name": "base",
+      "displayName": "All unit tests",
+      "description": "Provides every test defined",
+      "configurePreset": "x64-pc-windows-msvc",
+      "output": {
+        "shortProgress": true
+      }
+    },
+    {
+      "name": "clang",
+      "displayName": "Unit tests, built with Clang",
+      "description": "Provides every test defined, using Clang",
+      "configurePreset": "x64-pc-windows-clang-clangtidy",
+      "inherits": "base"
     }
   ]
 }

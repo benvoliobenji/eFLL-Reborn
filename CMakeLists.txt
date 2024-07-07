@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
 
-project(eFLL-Reborn VERSION 1.0.0.0 LANGUAGES C CXX ASM)
+project(eFLL VERSION 1.0.0.0 LANGUAGES C CXX ASM)
 
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/CPM.cmake)
 
