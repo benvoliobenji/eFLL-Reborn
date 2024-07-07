@@ -75,7 +75,7 @@
     },
     {
       "name": "arm32-stm32u575-none-gcc",
-      "hidden": false,
+      "hidden": true,
       "displayName": "STM32U575/GCC",
       "description": "STM32U575 development with GCC",
       "inherits": "target-gcc"

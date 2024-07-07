@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.27)
 
 # function to find MSBuild.exe, call with no argument for default install paths
 # or provide the Path to the MSBuild location

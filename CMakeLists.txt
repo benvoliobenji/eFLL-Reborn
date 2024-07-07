@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
 
-project(eFLL VERSION 1.0.0.0 LANGUAGES C CXX ASM)
+project(eFLL VERSION 1.0.0.0 LANGUAGES C CXX)
 
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/CPM.cmake)
 
@@ -76,6 +76,15 @@ add_subdirectory(third_party)
 
 # add source code
 add_subdirectory(src)
+
+if (PROJECT_IS_TOP_LEVEL)
+    # Add clang-format and clang-tidy to project
+    target_clangformat_setup(eFLL)
+
+    if(eFLL_ENABLE_CLANG_TIDY)
+        target_setup_clang_tidy(eFLL)
+    endif()
+endif(PROJECT_IS_TOP_LEVEL)
 
 if(${PROJECT_NAME}_BUILD_EXAMPLES)
     add_subdirectory(examples)

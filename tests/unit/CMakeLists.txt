@@ -33,7 +33,7 @@ function(add_unit_test target_name)
     gtest_discover_tests(${target_name} EXTRA_ARGS "--gtest_output=xml:${TEST_BIN_DIR}/test-results/")
 
     if(eFLL_ENABLE_CLANG_TIDY)
-        setup_clang_tidy(${target_name})
+        target_setup_clang_tidy(${target_name})
     endif()
 
     target_clangformat_setup(${target_name})
@@ -45,4 +45,5 @@ function(add_unit_test target_name)
 endfunction()
 
 add_unit_test(fuzzy_test FuzzyTest.cpp)
-add_unit_test(general_test GeneralTest.cpp)
+# Don't add GeneralTest as it's actually just an int main() function
+# add_unit_test(general_test GeneralTest.cpp)

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.27)
 
 function(prefix_clangformat_setup prefix)
     if(NOT CLANGFORMAT_EXECUTABLE)
@@ -70,71 +70,3 @@ function(target_clangformat_setup target)
 
     prefix_clangformat_setup(${target} ${target_sources} ${target_interface_sources})
 endfunction()
-
-# # Create a format_all and check_formatting cmake target for all source and header files
-# function(setup_clang_format)
-# cmake_parse_arguments(SETUP_CLANG_FORMAT
-# ""             # options
-# "PROJECT_ROOT" # oneValueArgs
-# ""             # multiValueArgs
-# ${ARGN}
-# )
-
-# if(SETUP_CLANG_FORMAT_PROJECT_ROOT)
-# set(PROJECT_ROOT ${SETUP_CLANG_FORMAT_PROJECT_ROOT})
-# else()
-# set(PROJECT_ROOT ${PROJECT_SOURCE_DIR})
-# endif()
-
-# if(${PROJECT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
-# # Add a target to run Clang Format
-# file(GLOB_RECURSE HEADER_FILES_TO_REFORMAT
-# ${PROJECT_ROOT}/examples/*.h
-# ${PROJECT_ROOT}/include/*.h
-# ${PROJECT_ROOT}/src/libraries/*.h
-# ${PROJECT_ROOT}/tests/*.h
-# )
-
-# file(GLOB_RECURSE SOURCE_FILES_TO_REFORMAT
-# ${PROJECT_ROOT}/examples/*.c
-# ${PROJECT_ROOT}/examples/*.cpp
-# ${PROJECT_ROOT}/src/libraries/*.c
-# ${PROJECT_ROOT}/src/libraries/*.cpp
-# ${PROJECT_ROOT}/tests/*.c
-# ${PROJECT_ROOT}/tests/*.cpp
-# )
-
-# # set (EXCLUDE_DIR "/targets/")
-# # foreach (TMP_PATH ${HEADER_FILES_TO_REFORMAT})
-# #   string (FIND ${TMP_PATH} ${EXCLUDE_DIR} EXCLUDE_DIR_FOUND)
-# #   if (NOT ${EXCLUDE_DIR_FOUND} EQUAL -1)
-# #       list (REMOVE_ITEM HEADER_FILES_TO_REFORMAT ${TMP_PATH})
-# #   endif ()
-# # endforeach(TMP_PATH)
-
-# # foreach (TMP_PATH ${SOURCE_FILES_TO_REFORMAT})
-# #   string (FIND ${TMP_PATH} ${EXCLUDE_DIR} EXCLUDE_DIR_FOUND)
-# #   if (NOT ${EXCLUDE_DIR_FOUND} EQUAL -1)
-# #       list (REMOVE_ITEM SOURCE_FILES_TO_REFORMAT ${TMP_PATH})
-# #   endif ()
-# # endforeach(TMP_PATH)
-
-# add_custom_target(ClangFormat-Format
-# COMMAND clang-format -style=file -i ${HEADER_FILES_TO_REFORMAT} ${SOURCE_FILES_TO_REFORMAT}
-# WORKING_DIRECTORY
-# ${CMAKE_SOURCE_DIR}
-# COMMENT
-# "Formatting..."
-# )
-
-# add_custom_target(ClangFormat-Check
-# COMMAND clang-format -style=file --dry-run --Werror ${HEADER_FILES_TO_REFORMAT} ${SOURCE_FILES_TO_REFORMAT}
-# WORKING_DIRECTORY
-# ${CMAKE_SOURCE_DIR}
-# COMMENT
-# "Checking Formatting..."
-# )
-
-# set_target_properties(ClangFormat-Format ClangFormat-Check PROPERTIES FOLDER tools)
-# endif()
-# endfunction()

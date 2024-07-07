@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.27)
 
 # Helper function to check against minimum compiler version
 function(compiler_check_min_version version)
@@ -27,14 +27,6 @@ function(target_add_linker_file target file)
         target_link_options(${target} ${LIB_TYPE}
             -T ${file}
         )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "IAR")
-        target_link_options(${target} ${LIB_TYPE}
-            --config ${file}
-        )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "ARMClang")
-        target_link_options(${target} ${LIB_TYPE}
-            --scatter ${file}
-        )
     else()
         message(FATAL_ERROR "Unsupported compiler")
     endif()
@@ -49,16 +41,6 @@ function(target_create_hex target file new_file)
             COMMAND ${GCC_OBJCOPY} -Oihex ${file} ${new_file}
             COMMENT "Building ${new_file}"
         )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "IAR")
-        add_custom_command(TARGET ${target} POST_BUILD
-            COMMAND ${IAR_COMPILER_DIR}/ielftool --ihex --verbose ${file} ${new_file}
-            COMMENT "Building ${new_file}"
-        )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "ARMClang")
-        add_custom_command(TARGET ${EXE_NAME} POST_BUILD
-            COMMAND ${CMAKE_OBJCOPY} ${file} --hex --output ${new_file}
-            COMMENT "Building ${new_file}"
-        )
     else()
         message(FATAL_ERROR "Unsupported compiler")
     endif()
@@ -69,16 +51,6 @@ function(target_create_bin target file new_file)
     if("${CMAKE_C_COMPILER_ID}" MATCHES "GNU")
         add_custom_command(TARGET ${target} POST_BUILD
             COMMAND ${GCC_OBJCOPY} -Obinary ${file} ${new_file}
-            COMMENT "Building ${new_file}"
-        )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "IAR")
-        add_custom_command(TARGET ${target} POST_BUILD
-            COMMAND ${IAR_COMPILER_DIR}/ielftool --bin --verbose ${file} ${new_file}
-            COMMENT "Building ${new_file}"
-        )
-    elseif("${CMAKE_C_COMPILER_ID}" MATCHES "ARMClang")
-        add_custom_command(TARGET ${EXE_NAME} POST_BUILD
-            COMMAND ${CMAKE_OBJCOPY} ${file} --bin --output ${new_file}
             COMMENT "Building ${new_file}"
         )
     else()

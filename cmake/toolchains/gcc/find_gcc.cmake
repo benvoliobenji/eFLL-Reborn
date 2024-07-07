@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.27)
 
 function(find_gcc_compiler compiler_path compiler_exe)
     # Search user provided path first.
