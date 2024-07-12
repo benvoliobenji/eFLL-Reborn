@@ -10,16 +10,18 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyOutput.h"
+#include "eFLL/FuzzyOutput.h"
 
 // CONTRUCTORS
-FuzzyOutput::FuzzyOutput() : FuzzyIO()
+FuzzyOutput::FuzzyOutput() :
+    FuzzyIO()
 {
     // instantiating a FuzzyComposition object
     this->fuzzyComposition = new FuzzyComposition();
 }
 
-FuzzyOutput::FuzzyOutput(int index) : FuzzyIO(index)
+FuzzyOutput::FuzzyOutput(int index) :
+    FuzzyIO(index)
 {
     // instantiating a FuzzyComposition object
     this->fuzzyComposition = new FuzzyComposition();
@@ -39,7 +41,7 @@ bool FuzzyOutput::truncate()
     // reset fuzzyComposition object
     this->fuzzyComposition->empty();
     // auxiliary variable to handle the operation
-    fuzzySetArray *aux = this->fuzzySets;
+    fuzzySetArray* aux = this->fuzzySets;
     // while not in the end of the array, iterate
     while (aux != NULL)
     {
@@ -53,7 +55,8 @@ bool FuzzyOutput::truncate()
                 this->fuzzyComposition->addPoint(aux->fuzzySet->getPointA(), 0.0);
             }
             // check if it is a triangle (B == C) and (A <> D)
-            if (aux->fuzzySet->getPointB() == aux->fuzzySet->getPointC() && aux->fuzzySet->getPointA() != aux->fuzzySet->getPointD())
+            if (aux->fuzzySet->getPointB() == aux->fuzzySet->getPointC() &&
+                aux->fuzzySet->getPointA() != aux->fuzzySet->getPointD())
             {
                 // check if the pertinence is the max
                 if (aux->fuzzySet->getPertinence() == 1.0)
@@ -66,26 +69,35 @@ bool FuzzyOutput::truncate()
                 // if the pertinence is below the max, and it is a triangle, calculate the new point B and C
                 else
                 {
-                    // rebuild the new point finding the intersection of two lines, the first is the segment from A to B (pertinence here is the y) and the segment of truncate, from A to D
-                    // initiate a new point with current values of B (here it does matters, it always will be changed)
-                    float newPointB = aux->fuzzySet->getPointB();
+                    // rebuild the new point finding the intersection of two lines, the first is the segment from A to B
+                    // (pertinence here is the y) and the segment of truncate, from A to D initiate a new point with
+                    // current values of B (here it does matters, it always will be changed)
+                    float newPointB      = aux->fuzzySet->getPointB();
                     float newPertinenceB = aux->fuzzySet->getPertinence();
                     // only if a regular triangle
-                    this->rebuild(aux->fuzzySet->getPointA(), 0.0, aux->fuzzySet->getPointB(), 1.0, aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(), aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointB, &newPertinenceB);
+                    this->rebuild(aux->fuzzySet->getPointA(), 0.0, aux->fuzzySet->getPointB(), 1.0,
+                                  aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(),
+                                  aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointB,
+                                  &newPertinenceB);
                     // include it
                     this->fuzzyComposition->addPoint(newPointB, newPertinenceB);
-                    // rebuild the new point finding the intersection of two lines, the second is the segment from C to D (pertinence here is the y) and the segment of truncate, from A to D
-                    // initiate a new point with current values of C (here it does matters, it always will be changed)
-                    float newPointC = aux->fuzzySet->getPointC();
+                    // rebuild the new point finding the intersection of two lines, the second is the segment from C to
+                    // D (pertinence here is the y) and the segment of truncate, from A to D initiate a new point with
+                    // current values of C (here it does matters, it always will be changed)
+                    float newPointC      = aux->fuzzySet->getPointC();
                     float newPertinenceC = aux->fuzzySet->getPertinence();
                     // only if a regular triangle
-                    this->rebuild(aux->fuzzySet->getPointC(), 1.0, aux->fuzzySet->getPointD(), 0.0, aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(), aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointC, &newPertinenceC);
+                    this->rebuild(aux->fuzzySet->getPointC(), 1.0, aux->fuzzySet->getPointD(), 0.0,
+                                  aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(),
+                                  aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointC,
+                                  &newPertinenceC);
                     // include it
                     this->fuzzyComposition->addPoint(newPointC, newPertinenceC);
                 }
             }
             // if until now, it was not a triangle
-            // check if (B <> C), if true, it is a trapeze (this code is the same of the triangle, except when the pertinence is 1.0, here we include the two points [B and C], because they are not equal)
+            // check if (B <> C), if true, it is a trapeze (this code is the same of the triangle, except when the
+            // pertinence is 1.0, here we include the two points [B and C], because they are not equal)
             else if (aux->fuzzySet->getPointB() != aux->fuzzySet->getPointC())
             {
                 // check if the pertinence is the max
@@ -100,17 +112,25 @@ bool FuzzyOutput::truncate()
                 else
                 {
                     // initiate a new point with current values of B
-                    float newPointB = aux->fuzzySet->getPointB();
+                    float newPointB      = aux->fuzzySet->getPointB();
                     float newPertinenceB = aux->fuzzySet->getPertinence();
-                    // rebuild the new point finding the intersection of two lines, the first is the segment from A to B (pertinence here is the y) and the segment of truncate, from A to D
-                    this->rebuild(aux->fuzzySet->getPointA(), 0.0, aux->fuzzySet->getPointB(), 1.0, aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(), aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointB, &newPertinenceB);
+                    // rebuild the new point finding the intersection of two lines, the first is the segment from A to B
+                    // (pertinence here is the y) and the segment of truncate, from A to D
+                    this->rebuild(aux->fuzzySet->getPointA(), 0.0, aux->fuzzySet->getPointB(), 1.0,
+                                  aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(),
+                                  aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointB,
+                                  &newPertinenceB);
                     // include it
                     this->fuzzyComposition->addPoint(newPointB, newPertinenceB);
                     // initiate a new point with current values of C
-                    float newPointC = aux->fuzzySet->getPointC();
+                    float newPointC      = aux->fuzzySet->getPointC();
                     float newPertinenceC = aux->fuzzySet->getPertinence();
-                    // rebuild the new point finding the intersection of two lines, the first is the segment from C to D (pertinence here is the y) and the segment of truncate, from A to D
-                    this->rebuild(aux->fuzzySet->getPointC(), 1.0, aux->fuzzySet->getPointD(), 0.0, aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(), aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointC, &newPertinenceC);
+                    // rebuild the new point finding the intersection of two lines, the first is the segment from C to D
+                    // (pertinence here is the y) and the segment of truncate, from A to D
+                    this->rebuild(aux->fuzzySet->getPointC(), 1.0, aux->fuzzySet->getPointD(), 0.0,
+                                  aux->fuzzySet->getPointA(), aux->fuzzySet->getPertinence(),
+                                  aux->fuzzySet->getPointD(), aux->fuzzySet->getPertinence(), &newPointC,
+                                  &newPertinenceC);
                     // include it
                     this->fuzzyComposition->addPoint(newPointC, newPertinenceC);
                 }
@@ -150,8 +170,8 @@ float FuzzyOutput::getCrispOutput()
 bool FuzzyOutput::order()
 {
     // instantiating some auxiliary variables
-    fuzzySetArray *aux1 = this->fuzzySets;
-    fuzzySetArray *aux2 = this->fuzzySets;
+    fuzzySetArray* aux1 = this->fuzzySets;
+    fuzzySetArray* aux2 = this->fuzzySets;
     // while not in the end of the array, iterate
     while (aux1 != NULL)
     {
@@ -178,7 +198,7 @@ bool FuzzyOutput::order()
 }
 
 // Method to get the value (pointer) of fuzzyComposition
-FuzzyComposition *FuzzyOutput::getFuzzyComposition()
+FuzzyComposition* FuzzyOutput::getFuzzyComposition()
 {
     return this->fuzzyComposition;
 }
@@ -186,10 +206,10 @@ FuzzyComposition *FuzzyOutput::getFuzzyComposition()
 // PRIVATE METHODS
 
 // Method to invert the values (references) of two FuzzySet
-bool FuzzyOutput::swap(fuzzySetArray *fuzzySetA, fuzzySetArray *fuzzySetB)
+bool FuzzyOutput::swap(fuzzySetArray* fuzzySetA, fuzzySetArray* fuzzySetB)
 {
     // put the first into an auxiliary variable
-    FuzzySet *aux = fuzzySetA->fuzzySet;
+    FuzzySet* aux = fuzzySetA->fuzzySet;
     // put the second into the first
     fuzzySetA->fuzzySet = fuzzySetB->fuzzySet;
     // put the auxiliary into the second
@@ -198,13 +218,22 @@ bool FuzzyOutput::swap(fuzzySetArray *fuzzySetA, fuzzySetArray *fuzzySetB)
 }
 
 // Method to rebuild some point, the new point is calculated finding the intersection between two lines
-bool FuzzyOutput::rebuild(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, float *point, float *pertinence)
+bool FuzzyOutput::rebuild(float x1,
+                          float y1,
+                          float x2,
+                          float y2,
+                          float x3,
+                          float y3,
+                          float x4,
+                          float y4,
+                          float* point,
+                          float* pertinence)
 {
     // help variables
     float denom, numera, numerb;
     float mua, mub;
     // calculate the denominator and numerator
-    denom = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
+    denom  = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
     numera = (x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3);
     numerb = (x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3);
     // if negative, convert to positive
@@ -212,7 +241,8 @@ bool FuzzyOutput::rebuild(float x1, float y1, float x2, float y2, float x3, floa
     {
         denom *= -1.0;
     }
-    // If the denominator is zero or close to it, it means that the lines are parallels, so return false for intersection
+    // If the denominator is zero or close to it, it means that the lines are parallels, so return false for
+    // intersection
     if (denom < EPSILON_VALUE)
     {
         // return false for intersection
@@ -239,7 +269,7 @@ bool FuzzyOutput::rebuild(float x1, float y1, float x2, float y2, float x3, floa
     else
     {
         // calculate and setting the new point and pertinence
-        *point = x1 + mua * (x2 - x1);
+        *point      = x1 + mua * (x2 - x1);
         *pertinence = y1 + mua * (y2 - y1);
         // return true for intersection
         return true;

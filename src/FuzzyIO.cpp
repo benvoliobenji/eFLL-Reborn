@@ -10,7 +10,7 @@
  *                      Douglas S. Kridi <douglaskridi@gmail.com>
  *                      Kannya Leal <kannyal@hotmail.com>
  */
-#include "FuzzyIO.h"
+#include "eFLL/FuzzyIO.h"
 
 // CONTRUCTORS
 FuzzyIO::FuzzyIO()
@@ -19,7 +19,7 @@ FuzzyIO::FuzzyIO()
 
 FuzzyIO::FuzzyIO(int index)
 {
-    this->index = index;
+    this->index      = index;
     this->crispInput = 0.0;
     // Initializing pointers with NULL
     this->fuzzySets = NULL;
@@ -52,19 +52,19 @@ float FuzzyIO::getCrispInput()
 }
 
 // Method to include a new FuzzySet into FuzzyIO
-bool FuzzyIO::addFuzzySet(FuzzySet *fuzzySet)
+bool FuzzyIO::addFuzzySet(FuzzySet* fuzzySet)
 {
     // auxiliary variable to handle the operation
-    fuzzySetArray *newOne;
+    fuzzySetArray* newOne;
     // allocating in memory
-    if ((newOne = (fuzzySetArray *)malloc(sizeof(fuzzySetArray))) == NULL)
+    if ((newOne = (fuzzySetArray*)malloc(sizeof(fuzzySetArray))) == NULL)
     {
         // return false if in out of memory
         return false;
     }
     // building the object
     newOne->fuzzySet = fuzzySet;
-    newOne->next = NULL;
+    newOne->next     = NULL;
     // if it is the first FuzzySet, set it as the head
     if (this->fuzzySets == NULL)
     {
@@ -73,7 +73,7 @@ bool FuzzyIO::addFuzzySet(FuzzySet *fuzzySet)
     else
     {
         // auxiliary variable to handle the operation
-        fuzzySetArray *aux = this->fuzzySets;
+        fuzzySetArray* aux = this->fuzzySets;
         // find the last element of the array
         while (aux != NULL)
         {
@@ -93,7 +93,7 @@ bool FuzzyIO::addFuzzySet(FuzzySet *fuzzySet)
 void FuzzyIO::resetFuzzySets()
 {
     // auxiliary variable to handle the operation
-    fuzzySetArray *fuzzySetsAux = this->fuzzySets;
+    fuzzySetArray* fuzzySetsAux = this->fuzzySets;
     // while not in the end of the array, iterate
     while (fuzzySetsAux != NULL)
     {
@@ -105,7 +105,7 @@ void FuzzyIO::resetFuzzySets()
 // PROTECTED METHODS
 
 // Method to recursively clean all FuzzySet from memory
-void FuzzyIO::cleanFuzzySets(fuzzySetArray *aux)
+void FuzzyIO::cleanFuzzySets(fuzzySetArray* aux)
 {
     if (aux != NULL)
     {
