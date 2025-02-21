@@ -19,6 +19,7 @@ if(eFLL_ENABLE_CODE_COVERAGE)
     add_code_coverage_all_targets(EXCLUDE .*tests[/\\].* .*build[/\\].*)
 
     # Add our main application to the code coverage
+    message(STATUS "Adding eFLL to code coverage")
     target_code_coverage(eFLL AUTO ALL)
 endif()
 
@@ -40,6 +41,7 @@ function(add_unit_test target_name)
 
     if(eFLL_ENABLE_CODE_COVERAGE)
         # Append each test exe for coverage analysis to test against our main app
+        message(STATUS "Adding ${target_name} to code coverage")
         target_code_coverage(${target_name} AUTO ALL)
     endif()
 endfunction()

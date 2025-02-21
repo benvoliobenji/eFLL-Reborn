@@ -159,6 +159,36 @@
       }
     }
   ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "displayName": "Default build",
+      "description": "Builds the default target",
+      "configurePreset": "x64-pc-windows-msvc",
+      "targets": ["all"]
+    },
+    {
+      "name": "clang",
+      "displayName": "Build with Clang",
+      "description": "Builds the default target with Clang",
+      "configurePreset": "x64-pc-windows-clang-clangtidy",
+      "inherits": "default"
+    },
+    {
+      "name": "gcc",
+      "displayName": "Build with GCC",
+      "description": "Builds the default target with GCC",
+      "configurePreset": "gcc-none-eabi",
+      "inherits": "default"
+    },
+    {
+      "name": "stm32u575",
+      "displayName": "Build for STM32U575",
+      "description": "Builds the default target for STM32U575",
+      "configurePreset": "arm32-stm32u575-none-gcc",
+      "inherits": "default"
+    }
+  ],
   "testPresets": [
     {
       "name": "base",
