@@ -1,0 +1,7 @@
+mkdocs
+mkdocs-awesome-nav
+mkdocs-awesome-pages-plugin
+mkdocs-get-deps
+mkdocs-material
+mkdocs-material-extensions
+mkdoxy

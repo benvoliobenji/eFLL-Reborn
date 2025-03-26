@@ -8,50 +8,17 @@ eFLL-Reborn is an updated take on the original [eFLL][efll] with the intention
 of bringing the abandoned library back to life with some needed quality-of-life
 improvements.
 
-## How to install (using CPM)
+## Development Setup
 
-In whatever CMake file you add your third-party projects:
+### Prerequisites
 
-```text
-CPMAddPackage(
-    NAME "eFLL"
-    GIT_REPOSITORY https://github.com/benvoliobenji/eFLL-Reborn
-    GIT_TAG {tag or branch}
-)
-```
+- Install [LLVM][llvm] - Version 18 or greater
+- (Optional) Install [MSVC][msvc]
+- (Optional) Install [GCC][gcc]
+- Code Editor (VSCode suggested)
 
-## How to install (general use)
-
-**Step 1:** Go to the official project page on GitHub (Here)
-
-**Step 2:** Make a clone of the project using Git or download at Download on the
-button "Download as zip."
-
-**Step 3:** Clone or unzip (For safety, rename the folder to "eFLL") the files
-into some folder
-
-**Step 4:** Compile and link it to your code (See Makefile)
-
-## Documentation
-
-All docuementation (API included) are located in [Github Pages][gh-pages].
-
-### Generate Documentation (Locally)
-
-The documentation utilizes [MkDocs][mkdocs] and various plugins to render. This
-utilizes python to build and deploy pages that can be written in markdown.
-
-To set up your local environment to serve the documentation on local host, use
-
-```bash
-pip install -r requirements.txt
-```
-
-to render the docs locally, use
-
-```bash
-mkdocs serve
-```
+The optional installs can be used to validate cross-compilation, but only
+`clang` is neccessary.
 
 ## What's Different?
 
@@ -120,18 +87,6 @@ to defuzzification in a continuous universe.
 
 Tested with [GTest](http://code.google.com/p/googletest/) for C, Google Inc.
 
-## Development Setup
-
-### Prerequisites
-
-- Install [LLVM][llvm] - Version 18 or greater
-- (Optional) Install [MSVC][msvc]
-- (Optional) Install [GCC][gcc]
-- Code Editor (VSCode suggested)
-
-The optional installs can be used to validate cross-compilation, but only
-`clang` is neccessary.
-
 ## Special Thanks to Contributers
 
 [@benvoliobenji](https://github.com/benvoliobenji/),
@@ -152,5 +107,3 @@ MIT License
 [llvm]: https://releases.llvm.org/download.html
 [msvc]: https://visualstudio.microsoft.com/vs/features/cplusplus/
 [gcc]: https://gcc.gnu.org/
-[gh-pages]: https://benvoliobenji.github.io/eFLL-Reborn/
-[mkdocs]: https://www.mkdocs.org/

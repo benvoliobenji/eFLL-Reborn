@@ -1,0 +1,102 @@
+site_name: Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)
+site_description: A C++ library for fuzzy logic control and reasoning
+site_author: "Benjamin Vogel"
+repo_url: https://github.com/benvoliobenji/eFLL-Reborn
+
+plugins:
+  - search
+  - awesome-pages
+  - mkdoxy:
+      projects:
+        eFLL-Reborn:
+          src-dirs: include/eFLL
+          full-doc: true
+          doxy-cfg:
+            FILE_PATTERNS: "*.h *.hpp *.c .cpp"
+            RECURSIVE: True
+  # - mkdocs-git-revision-date-localized-plugin:
+  #     type: git
+  #     fallback_to_build_date: true
+  #     date_format: "MMMM Do YYYY"
+  #     include_git_sha: true
+
+nav:
+  - Home: index.md
+  - Guides:
+      - "Usage": pages/usage.md
+      - "Integration": pages/integrating.md
+  - API:
+      - "Diagram": pages/class-diagram.md
+      - "Links": "eFLL-Reborn/links.md"
+      - "Classes":
+          - "Class List": "eFLL-Reborn/annotated.md"
+          - "Class Index": "eFLL-Reborn/classes.md"
+          - "Class Hierarchy": "eFLL-Reborn/hierarchy.md"
+          - "Class Members": "eFLL-Reborn/class_members.md"
+          - "Class Member Functions": "eFLL-Reborn/class_member_functions.md"
+          - "Class Member Variables": "eFLL-Reborn/class_member_variables.md"
+          - "Class Member Typedefs": "eFLL-Reborn/class_member_typedefs.md"
+          - "Class Member Enumerations": "eFLL-Reborn/class_member_enums.md"
+      - "Macros": "eFLL-Reborn/macros.md"
+      - "Files": "eFLL-Reborn/files.md"
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - c++
+    - c
+    - yaml
+  features:
+    - toc.integrate
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.expand
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - search.share
+  extra:
+    version:
+      provider: mike
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: (prefers-color-scheme)
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to system default
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      auto_title: true
+      # pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # The BetterEm extension improves the detection of Markup to emphasize text in Markdown using special characters, i.e. for **bold** and _italic_ formatting. Enable it via mkdocs.yml:
+  - pymdownx.betterem
+  # The Caret, Mark and Tilde extensions add the ability to highlight text and define sub- and superscript using a simple syntax. Enable them together via mkdocs.yml:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

@@ -12,7 +12,6 @@
  */
 #include "eFLL/Fuzzy.h"
 
-// CONTRUCTORS
 Fuzzy::Fuzzy()
 {
     // Initializing pointers with NULL
@@ -24,7 +23,6 @@ Fuzzy::Fuzzy()
     this->fuzzyRules = NULL;
 }
 
-// DESTRUCTOR
 Fuzzy::~Fuzzy()
 {
     this->cleanFuzzyInputs(this->fuzzyInputs);
@@ -32,9 +30,6 @@ Fuzzy::~Fuzzy()
     this->cleanFuzzyRules(this->fuzzyRules);
 }
 
-// PUBLIC METHODS
-
-// Method to include a new FuzzyInput into Fuzzy
 bool Fuzzy::addFuzzyInput(FuzzyInput* fuzzyInput)
 {
     // auxiliary variable to handle the operation
@@ -112,7 +107,6 @@ bool Fuzzy::addFuzzyOutput(FuzzyOutput* fuzzyOutput)
     return true;
 }
 
-// Method to include a new FuzzyRule into Fuzzy
 bool Fuzzy::addFuzzyRule(FuzzyRule* fuzzyRule)
 {
     // auxiliary variable to handle the operation
@@ -150,7 +144,6 @@ bool Fuzzy::addFuzzyRule(FuzzyRule* fuzzyRule)
     return true;
 }
 
-// Method to set a crisp value to one FuzzyInput
 bool Fuzzy::setInput(int fuzzyInputIndex, float crispValue)
 {
     // auxiliary variable to handle the operation
@@ -173,7 +166,6 @@ bool Fuzzy::setInput(int fuzzyInputIndex, float crispValue)
     return false;
 }
 
-// Method to start the calculate of the result
 bool Fuzzy::fuzzify()
 {
     // auxiliary variable to handle the operation
@@ -232,7 +224,6 @@ bool Fuzzy::fuzzify()
     return true;
 }
 
-// Method to verify if one specific FuzzyRule was triggered
 bool Fuzzy::isFiredRule(int fuzzyRuleIndex)
 {
     // auxiliary variable to handle the operation
@@ -254,7 +245,6 @@ bool Fuzzy::isFiredRule(int fuzzyRuleIndex)
     return false;
 }
 
-// Method to retrieve the result of the process for one specific FuzzyOutput
 float Fuzzy::defuzzify(int fuzzyOutputIndex)
 {
     // auxiliary variable to handle the operation
@@ -275,9 +265,6 @@ float Fuzzy::defuzzify(int fuzzyOutputIndex)
     return 0;
 }
 
-// PRIVATE METHODS
-
-// Method to recursively clean all FuzzyInput from memory
 void Fuzzy::cleanFuzzyInputs(fuzzyInputArray* aux)
 {
     if (aux != NULL)
@@ -288,7 +275,6 @@ void Fuzzy::cleanFuzzyInputs(fuzzyInputArray* aux)
     }
 }
 
-// Method to recursively clean all FuzzyOutput from memory
 void Fuzzy::cleanFuzzyOutputs(fuzzyOutputArray* aux)
 {
     if (aux != NULL)
@@ -299,7 +285,6 @@ void Fuzzy::cleanFuzzyOutputs(fuzzyOutputArray* aux)
     }
 }
 
-// Method to recursively clean all FuzzyRule from memory
 void Fuzzy::cleanFuzzyRules(fuzzyRuleArray* aux)
 {
     if (aux != NULL)

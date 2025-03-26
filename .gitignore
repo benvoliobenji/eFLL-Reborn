@@ -50,3 +50,6 @@ docs/html
 # PyTest
 /**/__pycache__
 /**/.pytest_cache
+
+# Mkdocs
+site/*

@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzyRule.h"
 
-// CONTRUCTORS
 FuzzyRule::FuzzyRule()
 {
 }
@@ -25,15 +24,11 @@ FuzzyRule::FuzzyRule(int index, FuzzyRuleAntecedent* fuzzyRuleAntecedent, FuzzyR
     this->fuzzyRuleConsequent = fuzzyRuleConsequent;
 }
 
-// PUBLIC METHODS
-
-// Method to get the value of index
 int FuzzyRule::getIndex()
 {
     return this->index;
 }
 
-// Method to evaluate the total expression
 bool FuzzyRule::evaluateExpression()
 {
     // check if the FuzzyRuleAntecedent and FuzzyRuleConsequent are valid
@@ -49,7 +44,6 @@ bool FuzzyRule::evaluateExpression()
     return this->fired;
 }
 
-// Method to get the value of fired
 bool FuzzyRule::isFired()
 {
     return this->fired;

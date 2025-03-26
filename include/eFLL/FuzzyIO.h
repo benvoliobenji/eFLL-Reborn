@@ -15,37 +15,88 @@
 
 // IMPORTING NECESSARY LIBRARIES
 #include <stdlib.h>
+
 #include "FuzzySet.h"
 
-// Array struct for FuzzySet objects
+/// @brief Linked list struct for FuzzySet objects
 struct fuzzySetArray
 {
-  FuzzySet *fuzzySet;
-  fuzzySetArray *next;
+    /// @brief Pointer to the current FuzzySet
+    FuzzySet* fuzzySet;
+    /// @brief Pointer to the next FuzzySet in the list
+    fuzzySetArray* next;
 };
 
+/// @brief Class to manage fuzzy inputs and outputs. Base class for FuzzyInput and FuzzyOutput.
 class FuzzyIO
 {
-public:
-  // CONTRUCTORS
-  FuzzyIO();
-  FuzzyIO(int index);
-  // DESTRUCTOR
-  ~FuzzyIO();
-  // PUBLIC METHODS
-  int getIndex();
-  void setCrispInput(float crispInput);
-  float getCrispInput();
-  bool addFuzzySet(FuzzySet *fuzzySet);
-  void resetFuzzySets();
+  public:
+    /// @brief  Default constructor
+    FuzzyIO();
 
-protected:
-  // PROTECTED VARIABLES
-  int index;
-  float crispInput;
-  fuzzySetArray *fuzzySets;
+    /**
+     * @brief Construct a new FuzzyIO object with a provided index.
+     *
+     * @param[in] index The index of the FuzzyIO object.
+     */
+    FuzzyIO(int index);
 
-  // PROTECTED METHODS
-  void cleanFuzzySets(fuzzySetArray *aux);
+    /// @brief Default destructor
+    ~FuzzyIO();
+
+    /**
+     * @brief Get the current index of the FuzzyIO object.
+     *
+     * @return int the index of the FuzzyIO object.
+     */
+    int getIndex();
+
+    /**
+     * @brief Set the value of the crisp input for this FuzzyIO object.
+     *
+     * @param[in] crispInput The crisp input value to set.
+     */
+    void setCrispInput(float crispInput);
+
+    /**
+     * @brief Get the value of the crisp input for this FuzzyIO object.
+     *
+     * @return float the crisp input value.
+     */
+    float getCrispInput();
+
+    /**
+     * @brief Add a new FuzzySet to the FuzzyIO object.
+     *
+     * @note will malloc a new fuzzySetArray struct and add it to the linked list of fuzzySets. Uses the provided
+     * pointer to the FuzzySet object as the fuzzySet member of the new fuzzySetArray struct.
+     *
+     * @param[in] fuzzySet Pointer to the FuzzySet object to add to the FuzzyIO object.
+     * @retval true if the FuzzySet was added successfully.
+     * @retval false if the FuzzySet could not be added or memory could not be allocated to add the new set.
+     */
+    bool addFuzzySet(FuzzySet* fuzzySet);
+
+    /**
+     * @brief Resets all fuzzy sets.
+     *
+     * @return true always returns true.
+     */
+    void resetFuzzySets();
+
+  protected:
+    /// @brief The index of the FuzzyIO object.
+    int index;
+    /// @brief The crisp input value for the FuzzyIO object.
+    float crispInput;
+    /// @brief Linked list of FuzzySet objects.
+    fuzzySetArray* fuzzySets;
+
+    /**
+     * @brief Recursively clean all FuzzySet structs from memory.
+     *
+     * @param[in] aux Pointer to the first FuzzySet struct in the linked list to clean up.
+     */
+    void cleanFuzzySets(fuzzySetArray* aux);
 };
 #endif
