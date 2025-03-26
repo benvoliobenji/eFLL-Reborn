@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzySet.h"
 
-// CONTRUCTORS
 FuzzySet::FuzzySet()
 {
 }
@@ -26,33 +25,26 @@ FuzzySet::FuzzySet(float a, float b, float c, float d)
     this->pertinence = 0.0;
 }
 
-// PUBLIC METHODS
-
-// Method to get the value of point A
 float FuzzySet::getPointA()
 {
     return this->a;
 }
 
-// Method to get the value of point B
 float FuzzySet::getPointB()
 {
     return this->b;
 }
 
-// Method to get the value of point C
 float FuzzySet::getPointC()
 {
     return this->c;
 }
 
-// Method to get the value of point D
 float FuzzySet::getPointD()
 {
     return this->d;
 }
 
-// Method to calculate the pertinence of the FuzzySet, according with the crispValue
 bool FuzzySet::calculatePertinence(float crispValue)
 {
     // check the crispValue is small then A
@@ -109,7 +101,6 @@ bool FuzzySet::calculatePertinence(float crispValue)
     return true;
 }
 
-// Method to set the value of pertinence
 void FuzzySet::setPertinence(float pertinence)
 {
     // check if the new pertinence is bigger then the current value because it can be called more then once by different
@@ -120,13 +111,11 @@ void FuzzySet::setPertinence(float pertinence)
     }
 }
 
-// Method to get the value of pertinence
 float FuzzySet::getPertinence()
 {
     return this->pertinence;
 }
 
-// Method to reset the value of pertinence
 void FuzzySet::reset()
 {
     this->pertinence = 0.0;

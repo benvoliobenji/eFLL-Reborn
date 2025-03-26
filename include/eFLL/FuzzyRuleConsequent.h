@@ -15,31 +15,59 @@
 
 // IMPORTING NECESSARY LIBRARIES
 #include <stdlib.h>
+
 #include "FuzzySet.h"
 
-// Array struct for fuzzySet (for Output) objects
+/// @brief Linked list struct for FuzzySet objects
 struct fuzzySetOutputArray
 {
-  FuzzySet *fuzzySet;
-  fuzzySetOutputArray *next;
+    /// @brief Pointer to the current FuzzySet
+    FuzzySet* fuzzySet;
+    /// @brief Pointer to the next FuzzySet in the list
+    fuzzySetOutputArray* next;
 };
 
+/// @brief Class to manage the consequent of a fuzzy rule
 class FuzzyRuleConsequent
 {
-public:
-  // CONTRUCTORS
-  FuzzyRuleConsequent();
-  // DESTRUCTOR
-  ~FuzzyRuleConsequent();
-  // PUBLIC METHODS
-  bool addOutput(FuzzySet *fuzzySet);
-  bool evaluate(float power);
+  public:
+    /// @brief Default constructor
+    FuzzyRuleConsequent();
 
-private:
-  // PRIVATE VARIABLES
-  fuzzySetOutputArray *fuzzySetOutputs;
+    /// @brief Default destructor
+    ~FuzzyRuleConsequent();
 
-  // PRIVATE METHODS
-  void cleanFuzzySets(fuzzySetOutputArray *aux);
+    /**
+     * @brief Add a new FuzzySet (for Output) into FuzzyRuleConsequent
+     *
+     * @note Will malloc a new fuzzySetOutputArray struct and add it to the linked list of FuzzySets. Uses the provided
+     * FuzzySet to populate the new fuzzySetOutputArray struct.
+     *
+     * @param[in] fuzzySet The FuzzySet to add to the FuzzyRuleConsequent.
+     * @retval true if the FuzzySet was added successfully.
+     * @retval false if the FuzzySet could not be added or memory could not be allocated to add the new FuzzySet.
+     */
+    bool addOutput(FuzzySet* fuzzySet);
+
+    /**
+     * @brief Set the pertinence of this consequent (how much the fired rule will affect the output)
+     *
+     * @param[in] power The pertinence of this consequent.
+     * @return true always returns true.
+     */
+    bool evaluate(float power);
+
+  private:
+    /// @brief The head of the linked list of FuzzySets
+    fuzzySetOutputArray* fuzzySetOutputs;
+
+    /**
+     * @brief Recursive method to clean the linked list of FuzzySets
+     *
+     * @note Will free the memory allocated for each fuzzySetOutputArray struct in the linked list.
+     *
+     * @param[in] aux Pointer to the first fuzzySetOutputArray struct in the linked list to clean up.
+     */
+    void cleanFuzzySets(fuzzySetOutputArray* aux);
 };
 #endif

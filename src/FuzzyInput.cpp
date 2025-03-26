@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzyInput.h"
 
-// CONTRUCTORS
 FuzzyInput::FuzzyInput() :
     FuzzyIO()
 {
@@ -25,15 +24,11 @@ FuzzyInput::FuzzyInput(int index) :
     // no custom construction, using the father (FuzzyIO) constructor
 }
 
-// DESTRUCTOR
 FuzzyInput::~FuzzyInput()
 {
     // no custom destruction, using the father (FuzzyIO) destructor
 }
 
-// PUBLIC METHODS
-
-// Method to calculate the pertinence of all FuzzySet
 bool FuzzyInput::calculateFuzzySetPertinences()
 {
     // auxiliary variable to handle the operation

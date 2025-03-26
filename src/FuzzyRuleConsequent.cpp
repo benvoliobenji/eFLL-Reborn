@@ -12,21 +12,16 @@
  */
 #include "eFLL/FuzzyRuleConsequent.h"
 
-// CONTRUCTORS
 FuzzyRuleConsequent::FuzzyRuleConsequent()
 {
     this->fuzzySetOutputs = NULL;
 }
 
-// DESTRUCTOR
 FuzzyRuleConsequent::~FuzzyRuleConsequent()
 {
     this->cleanFuzzySets(this->fuzzySetOutputs);
 }
 
-// PUBLIC METHODS
-
-// Method to include a new FuzzySet (for Output) into FuzzyRuleConsequent
 bool FuzzyRuleConsequent::addOutput(FuzzySet* fuzzySet)
 {
     // auxiliary variable to handle the operation
@@ -64,7 +59,6 @@ bool FuzzyRuleConsequent::addOutput(FuzzySet* fuzzySet)
     return true;
 }
 
-// Method to evaluate this FuzzyRuleConsequent
 bool FuzzyRuleConsequent::evaluate(float power)
 {
     // auxiliary variable to handle the operation
@@ -79,9 +73,6 @@ bool FuzzyRuleConsequent::evaluate(float power)
     return true;
 }
 
-// PRIVATE METHODS
-
-// Method to recursively clean all fuzzySetOutputArray from memory
 void FuzzyRuleConsequent::cleanFuzzySets(fuzzySetOutputArray* aux)
 {
     if (aux != NULL)

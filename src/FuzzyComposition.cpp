@@ -15,19 +15,16 @@
 #include <math.h>
 
 
-// CONTRUCTORS
 FuzzyComposition::FuzzyComposition()
 {
     this->points = NULL;
 }
 
-// DESTRUCTOR
 FuzzyComposition::~FuzzyComposition()
 {
     this->cleanPoints(this->points);
 }
 
-// Method to include a new pointsArray struct into FuzzyComposition
 bool FuzzyComposition::addPoint(float point, float pertinence)
 {
     // auxiliary variable to handle the operation
@@ -68,7 +65,6 @@ bool FuzzyComposition::addPoint(float point, float pertinence)
     return true;
 }
 
-// Method to check if FuzzyComposition contains an specific point and pertinence
 bool FuzzyComposition::checkPoint(float point, float pertinence)
 {
     // auxiliary variable to handle the operation
@@ -124,7 +120,6 @@ bool FuzzyComposition::build()
     return true;
 }
 
-// Method to calculate the center of the area of this FuzzyComposition
 float FuzzyComposition::calculate()
 {
     // auxiliary variable to handle the operation, instantiate with the first element from array
@@ -195,7 +190,6 @@ float FuzzyComposition::calculate()
     }
 }
 
-// Method to reset the Object
 bool FuzzyComposition::empty()
 {
     // clean all pointsArray from memory
@@ -205,7 +199,6 @@ bool FuzzyComposition::empty()
     return true;
 }
 
-// Method to count the amount of points used in this FuzzyComposition
 int FuzzyComposition::countPoints()
 {
     // variable to hold the count
@@ -234,8 +227,6 @@ void FuzzyComposition::cleanPoints(pointsArray* aux)
     }
 }
 
-// Method to search intersection between two segments, if found, create a new pointsArray (in found intersection) and
-// remove not necessary ones
 bool FuzzyComposition::rebuild(pointsArray* aSegmentBegin,
                                pointsArray* aSegmentEnd,
                                pointsArray* bSegmentBegin,
@@ -328,7 +319,6 @@ bool FuzzyComposition::rebuild(pointsArray* aSegmentBegin,
     }
 }
 
-// Function to remove (deallocate) some pointsArray
 bool FuzzyComposition::rmvPoint(pointsArray* point)
 {
     if (point != NULL)

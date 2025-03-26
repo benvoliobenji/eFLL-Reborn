@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzyOutput.h"
 
-// CONTRUCTORS
 FuzzyOutput::FuzzyOutput() :
     FuzzyIO()
 {
@@ -27,14 +26,11 @@ FuzzyOutput::FuzzyOutput(int index) :
     this->fuzzyComposition = new FuzzyComposition();
 }
 
-// DESTRUCTOR
 FuzzyOutput::~FuzzyOutput()
 {
     // reset fuzzyComposition object
     this->fuzzyComposition->empty();
 }
-
-// PUBLIC METHODS
 
 bool FuzzyOutput::truncate()
 {
@@ -159,14 +155,11 @@ bool FuzzyOutput::truncate()
     return true;
 }
 
-// Method to run the calculate of FuzzyComposition and return the result
 float FuzzyOutput::getCrispOutput()
 {
     return this->fuzzyComposition->calculate();
 }
 
-// Method to sort the FuzzySet by the reference of the point A in an ascending order
-// It is just a simple Bubble Sort
 bool FuzzyOutput::order()
 {
     // instantiating some auxiliary variables
@@ -197,13 +190,11 @@ bool FuzzyOutput::order()
     return true;
 }
 
-// Method to get the value (pointer) of fuzzyComposition
 FuzzyComposition* FuzzyOutput::getFuzzyComposition()
 {
     return this->fuzzyComposition;
 }
 
-// PRIVATE METHODS
 
 // Method to invert the values (references) of two FuzzySet
 bool FuzzyOutput::swap(fuzzySetArray* fuzzySetA, fuzzySetArray* fuzzySetB)
@@ -217,7 +208,6 @@ bool FuzzyOutput::swap(fuzzySetArray* fuzzySetA, fuzzySetArray* fuzzySetB)
     return true;
 }
 
-// Method to rebuild some point, the new point is calculated finding the intersection between two lines
 bool FuzzyOutput::rebuild(float x1,
                           float y1,
                           float x2,

@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzyRuleAntecedent.h"
 
-// CONTRUCTORS
 FuzzyRuleAntecedent::FuzzyRuleAntecedent()
 {
     // set the initial values
@@ -24,9 +23,7 @@ FuzzyRuleAntecedent::FuzzyRuleAntecedent()
     this->fuzzyRuleAntecedent2 = NULL;
 }
 
-// PUBLIC METHODS
 
-// Method to create a FuzzyRuleAntecedent with just one single FuzzySet
 bool FuzzyRuleAntecedent::joinSingle(FuzzySet* fuzzySet)
 {
     // check if FuzzySet is not null
@@ -40,7 +37,6 @@ bool FuzzyRuleAntecedent::joinSingle(FuzzySet* fuzzySet)
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with two FuzzySet, with AND
 bool FuzzyRuleAntecedent::joinWithAND(FuzzySet* fuzzySet1, FuzzySet* fuzzySet2)
 {
     // check if two FuzzySet are valid
@@ -56,7 +52,6 @@ bool FuzzyRuleAntecedent::joinWithAND(FuzzySet* fuzzySet1, FuzzySet* fuzzySet2)
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with two FuzzySet, with OR
 bool FuzzyRuleAntecedent::joinWithOR(FuzzySet* fuzzySet1, FuzzySet* fuzzySet2)
 {
     // check if two FuzzySet are valid
@@ -72,7 +67,6 @@ bool FuzzyRuleAntecedent::joinWithOR(FuzzySet* fuzzySet1, FuzzySet* fuzzySet2)
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with one FuzzySet and one FuzzyRuleAntecedent, with AND
 bool FuzzyRuleAntecedent::joinWithAND(FuzzySet* fuzzySet, FuzzyRuleAntecedent* fuzzyRuleAntecedent)
 {
     // check if the FuzzySet and FuzzyRuleAntecedent are valid
@@ -88,13 +82,11 @@ bool FuzzyRuleAntecedent::joinWithAND(FuzzySet* fuzzySet, FuzzyRuleAntecedent* f
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with one FuzzySet and one FuzzyRuleAntecedent, with AND (Inverse Params)
 bool FuzzyRuleAntecedent::joinWithAND(FuzzyRuleAntecedent* fuzzyRuleAntecedent, FuzzySet* fuzzySet)
 {
     return this->joinWithAND(fuzzySet, fuzzyRuleAntecedent);
 }
 
-// Method to create a FuzzyRuleAntecedent with one FuzzySet and one FuzzyRuleAntecedent, with OR
 bool FuzzyRuleAntecedent::joinWithOR(FuzzySet* fuzzySet, FuzzyRuleAntecedent* fuzzyRuleAntecedent)
 {
     // check if the FuzzySet and FuzzyRuleAntecedent are valid
@@ -110,13 +102,11 @@ bool FuzzyRuleAntecedent::joinWithOR(FuzzySet* fuzzySet, FuzzyRuleAntecedent* fu
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with one FuzzySet and one FuzzyRuleAntecedent, with OR (Inverse Params)
 bool FuzzyRuleAntecedent::joinWithOR(FuzzyRuleAntecedent* fuzzyRuleAntecedent, FuzzySet* fuzzySet)
 {
     return this->joinWithOR(fuzzySet, fuzzyRuleAntecedent);
 }
 
-// Method to create a FuzzyRuleAntecedent with two FuzzyRuleAntecedent, with AND
 bool FuzzyRuleAntecedent::joinWithAND(FuzzyRuleAntecedent* fuzzyRuleAntecedent1,
                                       FuzzyRuleAntecedent* fuzzyRuleAntecedent2)
 {
@@ -133,7 +123,6 @@ bool FuzzyRuleAntecedent::joinWithAND(FuzzyRuleAntecedent* fuzzyRuleAntecedent1,
     return false;
 }
 
-// Method to create a FuzzyRuleAntecedent with two FuzzyRuleAntecedent, with OR
 bool FuzzyRuleAntecedent::joinWithOR(FuzzyRuleAntecedent* fuzzyRuleAntecedent1,
                                      FuzzyRuleAntecedent* fuzzyRuleAntecedent2)
 {

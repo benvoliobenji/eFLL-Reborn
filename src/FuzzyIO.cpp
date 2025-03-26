@@ -12,7 +12,6 @@
  */
 #include "eFLL/FuzzyIO.h"
 
-// CONTRUCTORS
 FuzzyIO::FuzzyIO()
 {
 }
@@ -25,33 +24,26 @@ FuzzyIO::FuzzyIO(int index)
     this->fuzzySets = NULL;
 }
 
-// DESTRUCTOR
 FuzzyIO::~FuzzyIO()
 {
     this->cleanFuzzySets(this->fuzzySets);
 }
 
-// PUBLIC METHODS
-
-// Method to get the value of index
 int FuzzyIO::getIndex()
 {
     return this->index;
 }
 
-// Method to set the value of crispInput
 void FuzzyIO::setCrispInput(float crispInput)
 {
     this->crispInput = crispInput;
 }
 
-// Method to get the value of crispInput
 float FuzzyIO::getCrispInput()
 {
     return this->crispInput;
 }
 
-// Method to include a new FuzzySet into FuzzyIO
 bool FuzzyIO::addFuzzySet(FuzzySet* fuzzySet)
 {
     // auxiliary variable to handle the operation
@@ -89,7 +81,6 @@ bool FuzzyIO::addFuzzySet(FuzzySet* fuzzySet)
     return true;
 }
 
-// Method to reset all FuzzySet of this collection
 void FuzzyIO::resetFuzzySets()
 {
     // auxiliary variable to handle the operation
@@ -102,9 +93,6 @@ void FuzzyIO::resetFuzzySets()
     }
 }
 
-// PROTECTED METHODS
-
-// Method to recursively clean all FuzzySet from memory
 void FuzzyIO::cleanFuzzySets(fuzzySetArray* aux)
 {
     if (aux != NULL)
