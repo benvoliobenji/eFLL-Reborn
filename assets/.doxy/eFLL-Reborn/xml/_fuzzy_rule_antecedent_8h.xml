@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_fuzzy_rule_antecedent_8h" kind="file" language="C++">
+    <compoundname>FuzzyRuleAntecedent.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="_fuzzy_set_8h" local="yes">FuzzySet.h</includes>
+    <includedby refid="_fuzzy_rule_8h" local="yes">include/eFLL/FuzzyRule.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/eFLL/FuzzyRuleAntecedent.h</label>
+        <link refid="_fuzzy_rule_antecedent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuzzySet.h</label>
+        <link refid="_fuzzy_set_8h_source"/>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/eFLL/Fuzzy.h</label>
+        <link refid="_fuzzy_8h_source"/>
+      </node>
+      <node id="2">
+        <label>include/eFLL/FuzzyRule.h</label>
+        <link refid="_fuzzy_rule_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/eFLL/FuzzyRuleAntecedent.h</label>
+        <link refid="_fuzzy_rule_antecedent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_fuzzy_rule_antecedent" prot="public">FuzzyRuleAntecedent</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1ac56577e3b08d3c7453db5d81d96bf05b" prot="public" static="no">
+        <name>OP_AND</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>The AND operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="25" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1ada17ceeb97ff33a840db0943f9821c5b" prot="public" static="no">
+        <name>OP_OR</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>The OR operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="27" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1a571487cc078aa463d635fa4753fa0528" prot="public" static="no">
+        <name>MODE_FS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>The mode for a single <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="32" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1a467ac7746282f6795773f151cd9ab833" prot="public" static="no">
+        <name>MODE_FS_FS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>The mode for two FuzzySets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="34" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1ad7169ae0c6b7c2458eebf0e2f2a7a3aa" prot="public" static="no">
+        <name>MODE_FS_FRA</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>The mode for a <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> and a <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="36" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_fuzzy_rule_antecedent_8h_1a8877c73f252443432c46c24cccd6f5d0" prot="public" static="no">
+        <name>MODE_FRA_FRA</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>The mode for two FuzzyRuleAntecedents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="38" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Robotic<sp/>Research<sp/>Group<sp/>(RRG)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>State<sp/>University<sp/>of<sp/>Piauí<sp/>(UESPI),<sp/>Brazil<sp/>-<sp/>Piauí<sp/>-<sp/>Teresina</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>FuzzyRuleAntecedent.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>AJ<sp/>Alves<sp/>&lt;aj.alves@zerokol.com&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Co<sp/>authors:<sp/>Dr.<sp/>Ricardo<sp/>Lira<sp/>&lt;ricardor_usp@yahoo.com.br&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msc.<sp/>Marvin<sp/>Lemos<sp/>&lt;marvinlemos@gmail.com&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Douglas<sp/>S.<sp/>Kridi<sp/>&lt;douglaskridi@gmail.com&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Kannya<sp/>Leal<sp/>&lt;kannyal@hotmail.com&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUZZYRULEANTECEDENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUZZYRULEANTECEDENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTING<sp/>NECESSARY<sp/>LIBRARIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FuzzySet.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>possible<sp/>logic<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OP_AND<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OP_OR<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>possible<sp/>join<sp/>associations<sp/>modes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODE_FS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODE_FS_FS<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODE_FS_FRA<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODE_FRA_FRA<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_fuzzy_rule_antecedent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_fuzzy_rule_antecedent_1acdebc9498685bfa78a9b45de77f30855" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1acdebc9498685bfa78a9b45de77f30855" kindref="member">joinSingle</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_fuzzy_rule_antecedent_1a136711ec197daeb8eb59bb62bf829c5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a136711ec197daeb8eb59bb62bf829c5f" kindref="member">joinWithAND</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet1,<sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet2);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_fuzzy_rule_antecedent_1a8d15d25c499e4cd265105ae7e8b674d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a8d15d25c499e4cd265105ae7e8b674d9" kindref="member">joinWithOR</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet1,<sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet2);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" kindref="member">joinWithAND</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet,<sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_fuzzy_rule_antecedent_1a569e451a4bf47f7ba60e2427ba419e9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a569e451a4bf47f7ba60e2427ba419e9e" kindref="member">joinWithAND</ref>(<ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent,<sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" kindref="member">joinWithOR</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet,<sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_fuzzy_rule_antecedent_1a178ac5d346c7863ba0553b75a9848ffb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a178ac5d346c7863ba0553b75a9848ffb" kindref="member">joinWithOR</ref>(<ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent,<sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_fuzzy_rule_antecedent_1a120870a0b07bf4c4793fc2b015be9784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a120870a0b07bf4c4793fc2b015be9784" kindref="member">joinWithAND</ref>(<ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent1,<sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent2);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_fuzzy_rule_antecedent_1adbcd505f91e35e2b0af490bae61724a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1adbcd505f91e35e2b0af490bae61724a1" kindref="member">joinWithOR</ref>(<ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent1,<sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent2);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="class_fuzzy_rule_antecedent_1a412d1915bb0061152d430fbedfeacab1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_rule_antecedent_1a412d1915bb0061152d430fbedfeacab1" kindref="member">evaluate</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>op;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet2;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kindref="member">FuzzyRuleAntecedent</ref>*<sp/>fuzzyRuleAntecedent2;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/eFLL/FuzzyRuleAntecedent.h"/>
+  </compounddef>
+</doxygen>

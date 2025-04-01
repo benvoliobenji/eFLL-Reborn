@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structfuzzy_set_array" kind="struct" language="C++" prot="public">
+    <compoundname>fuzzySetArray</compoundname>
+    <includes refid="_fuzzy_i_o_8h" local="no">FuzzyIO.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfuzzy_set_array_1a46392b7abfb3f37f206e43391b41c35a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+        <definition>FuzzySet* fuzzySetArray::fuzzySet</definition>
+        <argsstring></argsstring>
+        <name>fuzzySet</name>
+        <qualifiedname>fuzzySetArray::fuzzySet</qualifiedname>
+        <briefdescription>
+<para>Pointer to the current <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="25" column="14" bodyfile="include/eFLL/FuzzyIO.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfuzzy_set_array_1a1b80cdb958af0a2e67361dff9a0119b5" prot="public" static="no" mutable="no">
+        <type><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> *</type>
+        <definition>fuzzySetArray* fuzzySetArray::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>fuzzySetArray::next</qualifiedname>
+        <briefdescription>
+<para>Pointer to the next <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="27" column="19" bodyfile="include/eFLL/FuzzyIO.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Linked list struct for <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>FuzzySet</label>
+        <link refid="class_fuzzy_set"/>
+      </node>
+      <node id="1">
+        <label>fuzzySetArray</label>
+        <link refid="structfuzzy_set_array"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fuzzySet</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/eFLL/FuzzyIO.h" line="22" column="1" bodyfile="include/eFLL/FuzzyIO.h" bodystart="23" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structfuzzy_set_array_1a46392b7abfb3f37f206e43391b41c35a" prot="public" virt="non-virtual"><scope>fuzzySetArray</scope><name>fuzzySet</name></member>
+      <member refid="structfuzzy_set_array_1a1b80cdb958af0a2e67361dff9a0119b5" prot="public" virt="non-virtual"><scope>fuzzySetArray</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_fuzzy_composition_8h" kind="file" language="C++">
+    <compoundname>FuzzyComposition.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="_fuzzy_output_8h" local="yes">include/eFLL/FuzzyOutput.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/eFLL/FuzzyComposition.h</label>
+        <link refid="_fuzzy_composition_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/eFLL/Fuzzy.h</label>
+        <link refid="_fuzzy_8h_source"/>
+      </node>
+      <node id="1">
+        <label>include/eFLL/FuzzyComposition.h</label>
+        <link refid="_fuzzy_composition_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/eFLL/FuzzyOutput.h</label>
+        <link refid="_fuzzy_output_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpoints_array" prot="public">pointsArray</innerclass>
+    <innerclass refid="class_fuzzy_composition" prot="public">FuzzyComposition</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_fuzzy_composition_8h_1a968c8137827c1aa39103f19b2e081f3a" prot="public" static="no">
+        <name>EPSILON_VALUE</name>
+        <initializer>1.0E-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="20" column="9" bodyfile="include/eFLL/FuzzyComposition.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Robotic<sp/>Research<sp/>Group<sp/>(RRG)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>State<sp/>University<sp/>of<sp/>Piauí<sp/>(UESPI),<sp/>Brazil<sp/>-<sp/>Piauí<sp/>-<sp/>Teresina</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>FuzzyComposition.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>AJ<sp/>Alves<sp/>&lt;aj.alves@zerokol.com&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Co<sp/>authors:<sp/>Dr.<sp/>Ricardo<sp/>Lira<sp/>&lt;ricardor_usp@yahoo.com.br&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msc.<sp/>Marvin<sp/>Lemos<sp/>&lt;marvinlemos@gmail.com&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Douglas<sp/>S.<sp/>Kridi<sp/>&lt;douglaskridi@gmail.com&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Kannya<sp/>Leal<sp/>&lt;kannyal@hotmail.com&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUZZYCOMPOSITION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUZZYCOMPOSITION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTING<sp/>NECESSARY<sp/>LIBRARIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPSILON_VALUE<sp/>1.0E-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structpoints_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpoints_array" kindref="compound">pointsArray</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>previous;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>point;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pertinence;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_fuzzy_composition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" kindref="member">FuzzyComposition</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" kindref="member">FuzzyComposition</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_fuzzy_composition_1aec737d15a3471aae75c0fc847296d398" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_composition_1aec737d15a3471aae75c0fc847296d398" kindref="member">~FuzzyComposition</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_fuzzy_composition_1a9620bf01d814c7a25ffe5e8e21d71c6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1a9620bf01d814c7a25ffe5e8e21d71c6e" kindref="member">addPoint</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>point,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pertinence);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_fuzzy_composition_1a728351b9929ea7c0e48e263fa375e1aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1a728351b9929ea7c0e48e263fa375e1aa" kindref="member">checkPoint</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>point,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pertinence);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_fuzzy_composition_1a2b7353428fb9c8335d057723c7394ba9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1a2b7353428fb9c8335d057723c7394ba9" kindref="member">build</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_fuzzy_composition_1a5105427bee032ac9132fe8718b3bf185" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1a5105427bee032ac9132fe8718b3bf185" kindref="member">calculate</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_fuzzy_composition_1ab65e5f10f014e496d5549aa50368a05b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1ab65e5f10f014e496d5549aa50368a05b" kindref="member">empty</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_fuzzy_composition_1a94c6abd7d66acb3c661e1164c7df97e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_composition_1a94c6abd7d66acb3c661e1164c7df97e3" kindref="member">countPoints</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>points;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanPoints(<ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>aux);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rebuild(<ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>aSegmentBegin,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>aSegmentEnd,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>bSegmentBegin,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>bSegmentEnd);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rmvPoint(<ref refid="structpoints_array" kindref="compound">pointsArray</ref>*<sp/>point);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/eFLL/FuzzyComposition.h"/>
+  </compounddef>
+</doxygen>

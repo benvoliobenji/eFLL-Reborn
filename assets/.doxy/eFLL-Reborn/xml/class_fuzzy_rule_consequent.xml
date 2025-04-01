@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_rule_consequent" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyRuleConsequent</compoundname>
+    <includes refid="_fuzzy_rule_consequent_8h" local="no">FuzzyRuleConsequent.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_rule_consequent_1a3e681b59c235c396a82c556d957fb611" prot="private" static="no" mutable="no">
+        <type><ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> *</type>
+        <definition>fuzzySetOutputArray* FuzzyRuleConsequent::fuzzySetOutputs</definition>
+        <argsstring></argsstring>
+        <name>fuzzySetOutputs</name>
+        <qualifiedname>FuzzyRuleConsequent::fuzzySetOutputs</qualifiedname>
+        <briefdescription>
+<para>The head of the linked list of FuzzySets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="62" column="25" bodyfile="include/eFLL/FuzzyRuleConsequent.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_rule_consequent_1ad025f0ae825bda6099997bc920f6b5ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyRuleConsequent::FuzzyRuleConsequent</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyRuleConsequent</name>
+        <qualifiedname>FuzzyRuleConsequent::FuzzyRuleConsequent</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_consequent_1a3b350c8782df87594d39be4fe0376a5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyRuleConsequent::~FuzzyRuleConsequent</definition>
+        <argsstring>()</argsstring>
+        <name>~FuzzyRuleConsequent</name>
+        <qualifiedname>FuzzyRuleConsequent::~FuzzyRuleConsequent</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_consequent_1acdf96d868a481429861d4765ef0e89e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleConsequent::addOutput</definition>
+        <argsstring>(FuzzySet *fuzzySet)</argsstring>
+        <name>addOutput</name>
+        <qualifiedname>FuzzyRuleConsequent::addOutput</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <briefdescription>
+<para>Add a new <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> (for Output) into <ref refid="class_fuzzy_rule_consequent" kindref="compound">FuzzyRuleConsequent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will malloc a new <ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> struct and add it to the linked list of FuzzySets. Uses the provided <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> to populate the new <ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> struct.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> to add to the <ref refid="class_fuzzy_rule_consequent" kindref="compound">FuzzyRuleConsequent</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> was added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> could not be added or memory could not be allocated to add the new <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_consequent_1a9e1021f756a6f9aaa26c6e1cb7639d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleConsequent::evaluate</definition>
+        <argsstring>(float power)</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>FuzzyRuleConsequent::evaluate</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>power</declname>
+        </param>
+        <briefdescription>
+<para>Set the pertinence of this consequent (how much the fired rule will affect the output) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pertinence of this consequent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="58" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fuzzy_rule_consequent_1afdaef42e3ae3344c009eb72ab720dd82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzyRuleConsequent::cleanFuzzySets</definition>
+        <argsstring>(fuzzySetOutputArray *aux)</argsstring>
+        <name>cleanFuzzySets</name>
+        <qualifiedname>FuzzyRuleConsequent::cleanFuzzySets</qualifiedname>
+        <param>
+          <type><ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> *</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+<para>Recursive method to clean the linked list of FuzzySets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will free the memory allocated for each <ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> struct in the linked list.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first <ref refid="structfuzzy_set_output_array" kindref="compound">fuzzySetOutputArray</ref> struct in the linked list to clean up. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleConsequent.h" line="71" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage the consequent of a fuzzy rule. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/FuzzyRuleConsequent.h" line="31" column="1" bodyfile="include/eFLL/FuzzyRuleConsequent.h" bodystart="32" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_rule_consequent_1acdf96d868a481429861d4765ef0e89e7" prot="public" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>addOutput</name></member>
+      <member refid="class_fuzzy_rule_consequent_1afdaef42e3ae3344c009eb72ab720dd82" prot="private" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>cleanFuzzySets</name></member>
+      <member refid="class_fuzzy_rule_consequent_1a9e1021f756a6f9aaa26c6e1cb7639d9a" prot="public" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>evaluate</name></member>
+      <member refid="class_fuzzy_rule_consequent_1ad025f0ae825bda6099997bc920f6b5ac" prot="public" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>FuzzyRuleConsequent</name></member>
+      <member refid="class_fuzzy_rule_consequent_1a3e681b59c235c396a82c556d957fb611" prot="private" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>fuzzySetOutputs</name></member>
+      <member refid="class_fuzzy_rule_consequent_1a3b350c8782df87594d39be4fe0376a5d" prot="public" virt="non-virtual"><scope>FuzzyRuleConsequent</scope><name>~FuzzyRuleConsequent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

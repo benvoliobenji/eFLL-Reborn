@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_26fb29e3dc7aa006416ef68260f1131f" kind="dir">
+    <compoundname>include/eFLL</compoundname>
+    <innerfile refid="_fuzzy_8h">Fuzzy.h</innerfile>
+    <innerfile refid="_fuzzy_composition_8h">FuzzyComposition.h</innerfile>
+    <innerfile refid="_fuzzy_input_8h">FuzzyInput.h</innerfile>
+    <innerfile refid="_fuzzy_i_o_8h">FuzzyIO.h</innerfile>
+    <innerfile refid="_fuzzy_output_8h">FuzzyOutput.h</innerfile>
+    <innerfile refid="_fuzzy_rule_8h">FuzzyRule.h</innerfile>
+    <innerfile refid="_fuzzy_rule_antecedent_8h">FuzzyRuleAntecedent.h</innerfile>
+    <innerfile refid="_fuzzy_rule_consequent_8h">FuzzyRuleConsequent.h</innerfile>
+    <innerfile refid="_fuzzy_set_8h">FuzzySet.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/"/>
+  </compounddef>
+</doxygen>

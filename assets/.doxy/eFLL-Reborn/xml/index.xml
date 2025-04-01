@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="class_fuzzy" kind="class"><name>Fuzzy</name>
+    <member refid="class_fuzzy_1a1fa273e728f30aaea68dc1612e78464f" kind="variable"><name>fuzzyInputs</name></member>
+    <member refid="class_fuzzy_1ac5923937fd79510ec2d42f46d6540b31" kind="variable"><name>fuzzyOutputs</name></member>
+    <member refid="class_fuzzy_1a767ea98794cc75d30c6f32179fd6f619" kind="variable"><name>fuzzyRules</name></member>
+    <member refid="class_fuzzy_1a87eb15e0587a3003f970179afbc6043b" kind="function"><name>Fuzzy</name></member>
+    <member refid="class_fuzzy_1aaf4a559322e94153bf6085dd2e96e80e" kind="function"><name>~Fuzzy</name></member>
+    <member refid="class_fuzzy_1a3249ff926ca45541906dd1865f13baaa" kind="function"><name>addFuzzyInput</name></member>
+    <member refid="class_fuzzy_1a63dd6b88f43d4bf5c7465231a8f7eb4a" kind="function"><name>addFuzzyOutput</name></member>
+    <member refid="class_fuzzy_1ad0c66e89b0e3ebbe60373216e59d6039" kind="function"><name>addFuzzyRule</name></member>
+    <member refid="class_fuzzy_1aa2732d9bef035d45df0c4a39510b786d" kind="function"><name>setInput</name></member>
+    <member refid="class_fuzzy_1aec44e9fc9cb94cf1332e144aa4a49ada" kind="function"><name>fuzzify</name></member>
+    <member refid="class_fuzzy_1a318b00a3e4e8ce14b938d9f39758de61" kind="function"><name>isFiredRule</name></member>
+    <member refid="class_fuzzy_1ac19899b207a6202e80ee695cc4750359" kind="function"><name>defuzzify</name></member>
+    <member refid="class_fuzzy_1aa543d3eea7b9ece15ba6aa2cc93c6010" kind="function"><name>cleanFuzzyInputs</name></member>
+    <member refid="class_fuzzy_1ac6e2019eba7b928b4f84f8990fe1a68f" kind="function"><name>cleanFuzzyOutputs</name></member>
+    <member refid="class_fuzzy_1ae4daf78a3af31807db660ae57b78b7af" kind="function"><name>cleanFuzzyRules</name></member>
+  </compound>
+  <compound refid="class_fuzzy_composition" kind="class"><name>FuzzyComposition</name>
+    <member refid="class_fuzzy_composition_1ad3f411b773b0517b63844d1b2c743735" kind="variable"><name>points</name></member>
+    <member refid="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" kind="function"><name>FuzzyComposition</name></member>
+    <member refid="class_fuzzy_composition_1aec737d15a3471aae75c0fc847296d398" kind="function"><name>~FuzzyComposition</name></member>
+    <member refid="class_fuzzy_composition_1a9620bf01d814c7a25ffe5e8e21d71c6e" kind="function"><name>addPoint</name></member>
+    <member refid="class_fuzzy_composition_1a728351b9929ea7c0e48e263fa375e1aa" kind="function"><name>checkPoint</name></member>
+    <member refid="class_fuzzy_composition_1a2b7353428fb9c8335d057723c7394ba9" kind="function"><name>build</name></member>
+    <member refid="class_fuzzy_composition_1a5105427bee032ac9132fe8718b3bf185" kind="function"><name>calculate</name></member>
+    <member refid="class_fuzzy_composition_1ab65e5f10f014e496d5549aa50368a05b" kind="function"><name>empty</name></member>
+    <member refid="class_fuzzy_composition_1a94c6abd7d66acb3c661e1164c7df97e3" kind="function"><name>countPoints</name></member>
+    <member refid="class_fuzzy_composition_1af96cd83420c863367beabfe1a9e5a5a9" kind="function"><name>cleanPoints</name></member>
+    <member refid="class_fuzzy_composition_1ad86c0ee0d6c649b80dcd82d5dbb32125" kind="function"><name>rebuild</name></member>
+    <member refid="class_fuzzy_composition_1a14cbcde729cea1e0603c1528e177864b" kind="function"><name>rmvPoint</name></member>
+  </compound>
+  <compound refid="class_fuzzy_input" kind="class"><name>FuzzyInput</name>
+    <member refid="class_fuzzy_input_1a95d02feb26b9728518efbb18b011b53b" kind="function"><name>FuzzyInput</name></member>
+    <member refid="class_fuzzy_input_1a1671ee1c3496780e35e7199d573fa407" kind="function"><name>FuzzyInput</name></member>
+    <member refid="class_fuzzy_input_1ac8d87f79e8f3f7d593f37ffdd81982f1" kind="function"><name>~FuzzyInput</name></member>
+    <member refid="class_fuzzy_input_1a593ceb7f2a8c579b69916fb116300b5b" kind="function"><name>calculateFuzzySetPertinences</name></member>
+  </compound>
+  <compound refid="structfuzzy_input_array" kind="struct"><name>fuzzyInputArray</name>
+    <member refid="structfuzzy_input_array_1a9166f3862c58a4452a4bf6cad5341061" kind="variable"><name>fuzzyInput</name></member>
+    <member refid="structfuzzy_input_array_1a545f3874a160f6bae92d0259fb89fa79" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="class_fuzzy_i_o" kind="class"><name>FuzzyIO</name>
+    <member refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" kind="variable"><name>index</name></member>
+    <member refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" kind="variable"><name>crispInput</name></member>
+    <member refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" kind="variable"><name>fuzzySets</name></member>
+    <member refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" kind="function"><name>FuzzyIO</name></member>
+    <member refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" kind="function"><name>FuzzyIO</name></member>
+    <member refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" kind="function"><name>~FuzzyIO</name></member>
+    <member refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" kind="function"><name>getIndex</name></member>
+    <member refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" kind="function"><name>setCrispInput</name></member>
+    <member refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" kind="function"><name>getCrispInput</name></member>
+    <member refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" kind="function"><name>addFuzzySet</name></member>
+    <member refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" kind="function"><name>resetFuzzySets</name></member>
+    <member refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" kind="function"><name>cleanFuzzySets</name></member>
+  </compound>
+  <compound refid="class_fuzzy_output" kind="class"><name>FuzzyOutput</name>
+    <member refid="class_fuzzy_output_1a7d19d7a7a197725ccc21296e5e18ce1f" kind="variable"><name>fuzzyComposition</name></member>
+    <member refid="class_fuzzy_output_1a8f4d746ede5565826e71727be0b39e92" kind="function"><name>FuzzyOutput</name></member>
+    <member refid="class_fuzzy_output_1a12fd52156301d3eb19ed306a6abfc16f" kind="function"><name>FuzzyOutput</name></member>
+    <member refid="class_fuzzy_output_1a8a10db12eb128427c2b401461b66d66e" kind="function"><name>~FuzzyOutput</name></member>
+    <member refid="class_fuzzy_output_1a2e313d1c403695491e645fa437cbee10" kind="function"><name>truncate</name></member>
+    <member refid="class_fuzzy_output_1a26d3ee43ccaef6e424df3bdc93d05c86" kind="function"><name>getCrispOutput</name></member>
+    <member refid="class_fuzzy_output_1a93a50f23187a36fecd0f52905bcb67a0" kind="function"><name>order</name></member>
+    <member refid="class_fuzzy_output_1a8cbff745bb4272ab4ad74f6044b6dfd3" kind="function"><name>getFuzzyComposition</name></member>
+    <member refid="class_fuzzy_output_1aafcc891832ae3a773101003292418a6a" kind="function"><name>swap</name></member>
+    <member refid="class_fuzzy_output_1a6ca4f770551196e0fc577168f05ba7c0" kind="function"><name>rebuild</name></member>
+  </compound>
+  <compound refid="structfuzzy_output_array" kind="struct"><name>fuzzyOutputArray</name>
+    <member refid="structfuzzy_output_array_1afca8e67ac94d7292ccb44a44460fb570" kind="variable"><name>fuzzyOutput</name></member>
+    <member refid="structfuzzy_output_array_1a92035006790d8d5beb8ed5655676e945" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="class_fuzzy_rule" kind="class"><name>FuzzyRule</name>
+    <member refid="class_fuzzy_rule_1aba09b19b1f7b710f58ae8a7388a93c5a" kind="variable"><name>index</name></member>
+    <member refid="class_fuzzy_rule_1ad47e0513e0c93b9767d4c46317ee6f4e" kind="variable"><name>fired</name></member>
+    <member refid="class_fuzzy_rule_1a434e952f72b4c258c6fb65a0f8d77e40" kind="variable"><name>fuzzyRuleAntecedent</name></member>
+    <member refid="class_fuzzy_rule_1a4917582954da3ec618b51dfd79257009" kind="variable"><name>fuzzyRuleConsequent</name></member>
+    <member refid="class_fuzzy_rule_1a82c36d3d2256395c5e55f060de0f78a1" kind="function"><name>FuzzyRule</name></member>
+    <member refid="class_fuzzy_rule_1a20be151e505fd40c585d9c9dc0a35971" kind="function"><name>FuzzyRule</name></member>
+    <member refid="class_fuzzy_rule_1a5fdb8531055fd05684b483ec78d4329a" kind="function"><name>getIndex</name></member>
+    <member refid="class_fuzzy_rule_1a882794ac641944f55f1ec7d27b24fe4f" kind="function"><name>evaluateExpression</name></member>
+    <member refid="class_fuzzy_rule_1aebe83ed00f60f066ba1dc668130911fc" kind="function"><name>isFired</name></member>
+  </compound>
+  <compound refid="class_fuzzy_rule_antecedent" kind="class"><name>FuzzyRuleAntecedent</name>
+    <member refid="class_fuzzy_rule_antecedent_1af02ca8a58611f54975955c40c469d19c" kind="variable"><name>op</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a2e500e4518916fc6e2f6e11be0f12363" kind="variable"><name>mode</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1af5545b8a2005eb55bd4b6ccea04a770e" kind="variable"><name>fuzzySet1</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a486caae19650a3b4cec2128b93a3347b" kind="variable"><name>fuzzySet2</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1adec4f4aac58e2b0f04612f2fce6be2fe" kind="variable"><name>fuzzyRuleAntecedent1</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a8a49488be1337f11279b999186f7edc3" kind="variable"><name>fuzzyRuleAntecedent2</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" kind="function"><name>FuzzyRuleAntecedent</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1acdebc9498685bfa78a9b45de77f30855" kind="function"><name>joinSingle</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a136711ec197daeb8eb59bb62bf829c5f" kind="function"><name>joinWithAND</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a8d15d25c499e4cd265105ae7e8b674d9" kind="function"><name>joinWithOR</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" kind="function"><name>joinWithAND</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a569e451a4bf47f7ba60e2427ba419e9e" kind="function"><name>joinWithAND</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" kind="function"><name>joinWithOR</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a178ac5d346c7863ba0553b75a9848ffb" kind="function"><name>joinWithOR</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a120870a0b07bf4c4793fc2b015be9784" kind="function"><name>joinWithAND</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1adbcd505f91e35e2b0af490bae61724a1" kind="function"><name>joinWithOR</name></member>
+    <member refid="class_fuzzy_rule_antecedent_1a412d1915bb0061152d430fbedfeacab1" kind="function"><name>evaluate</name></member>
+  </compound>
+  <compound refid="structfuzzy_rule_array" kind="struct"><name>fuzzyRuleArray</name>
+    <member refid="structfuzzy_rule_array_1a83c789d0af95720ee1f68dfa80c93ae2" kind="variable"><name>fuzzyRule</name></member>
+    <member refid="structfuzzy_rule_array_1ae4f5eabe86df213bb007aafef8974ba2" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="class_fuzzy_rule_consequent" kind="class"><name>FuzzyRuleConsequent</name>
+    <member refid="class_fuzzy_rule_consequent_1a3e681b59c235c396a82c556d957fb611" kind="variable"><name>fuzzySetOutputs</name></member>
+    <member refid="class_fuzzy_rule_consequent_1ad025f0ae825bda6099997bc920f6b5ac" kind="function"><name>FuzzyRuleConsequent</name></member>
+    <member refid="class_fuzzy_rule_consequent_1a3b350c8782df87594d39be4fe0376a5d" kind="function"><name>~FuzzyRuleConsequent</name></member>
+    <member refid="class_fuzzy_rule_consequent_1acdf96d868a481429861d4765ef0e89e7" kind="function"><name>addOutput</name></member>
+    <member refid="class_fuzzy_rule_consequent_1a9e1021f756a6f9aaa26c6e1cb7639d9a" kind="function"><name>evaluate</name></member>
+    <member refid="class_fuzzy_rule_consequent_1afdaef42e3ae3344c009eb72ab720dd82" kind="function"><name>cleanFuzzySets</name></member>
+  </compound>
+  <compound refid="class_fuzzy_set" kind="class"><name>FuzzySet</name>
+    <member refid="class_fuzzy_set_1a52929210a00068a214f54bf98ccec31d" kind="variable"><name>a</name></member>
+    <member refid="class_fuzzy_set_1a9afe45dbd967c050376d80cde61e0e2e" kind="variable"><name>b</name></member>
+    <member refid="class_fuzzy_set_1a2aee457088a73483070af7031af7c125" kind="variable"><name>c</name></member>
+    <member refid="class_fuzzy_set_1afa2b4740ff42a423173929a4f7212a98" kind="variable"><name>d</name></member>
+    <member refid="class_fuzzy_set_1a5d18b75e7a58f9b9762208a82715d6ee" kind="variable"><name>pertinence</name></member>
+    <member refid="class_fuzzy_set_1adc8ddf169f5107e01041818d620a6f4b" kind="function"><name>FuzzySet</name></member>
+    <member refid="class_fuzzy_set_1a11122e9b25891edb0f104bc18fd53583" kind="function"><name>FuzzySet</name></member>
+    <member refid="class_fuzzy_set_1a666a7463476b53416f359c04788c6546" kind="function"><name>getPointA</name></member>
+    <member refid="class_fuzzy_set_1a6a42d77a13c776bf990a142e43cf43fb" kind="function"><name>getPointB</name></member>
+    <member refid="class_fuzzy_set_1adc75903db22b87b21c664791d61b24ea" kind="function"><name>getPointC</name></member>
+    <member refid="class_fuzzy_set_1a72d7ace355eec68924189b10f8998964" kind="function"><name>getPointD</name></member>
+    <member refid="class_fuzzy_set_1a626b4eae4afe03f649b82cb5255b5757" kind="function"><name>calculatePertinence</name></member>
+    <member refid="class_fuzzy_set_1a10832d85d41b1f53c0ad649d587403f4" kind="function"><name>setPertinence</name></member>
+    <member refid="class_fuzzy_set_1ae0ed5b9735586a3c1913cb4e265d36c5" kind="function"><name>getPertinence</name></member>
+    <member refid="class_fuzzy_set_1a73c5aac678c8035c4bfc698641e258eb" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="structfuzzy_set_array" kind="struct"><name>fuzzySetArray</name>
+    <member refid="structfuzzy_set_array_1a46392b7abfb3f37f206e43391b41c35a" kind="variable"><name>fuzzySet</name></member>
+    <member refid="structfuzzy_set_array_1a1b80cdb958af0a2e67361dff9a0119b5" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="structfuzzy_set_output_array" kind="struct"><name>fuzzySetOutputArray</name>
+    <member refid="structfuzzy_set_output_array_1a62407e3f532ad2df893a6156f776bb87" kind="variable"><name>fuzzySet</name></member>
+    <member refid="structfuzzy_set_output_array_1af2f7efc7487d2ffad2e8766153de5dce" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="structpoints_array" kind="struct"><name>pointsArray</name>
+    <member refid="structpoints_array_1a36ed30d367b29836689804ec985bd8d6" kind="variable"><name>previous</name></member>
+    <member refid="structpoints_array_1a265e2f1b22ebcd6919e18ea64221cbc1" kind="variable"><name>point</name></member>
+    <member refid="structpoints_array_1a1d7b8b42d7672a79aed96537b60f18ee" kind="variable"><name>pertinence</name></member>
+    <member refid="structpoints_array_1a59818a8a63dc57cf0e698a336d55f3e4" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="_fuzzy_8h" kind="file"><name>Fuzzy.h</name>
+  </compound>
+  <compound refid="_fuzzy_composition_8h" kind="file"><name>FuzzyComposition.h</name>
+    <member refid="_fuzzy_composition_8h_1a968c8137827c1aa39103f19b2e081f3a" kind="define"><name>EPSILON_VALUE</name></member>
+  </compound>
+  <compound refid="_fuzzy_input_8h" kind="file"><name>FuzzyInput.h</name>
+  </compound>
+  <compound refid="_fuzzy_i_o_8h" kind="file"><name>FuzzyIO.h</name>
+  </compound>
+  <compound refid="_fuzzy_output_8h" kind="file"><name>FuzzyOutput.h</name>
+  </compound>
+  <compound refid="_fuzzy_rule_8h" kind="file"><name>FuzzyRule.h</name>
+  </compound>
+  <compound refid="_fuzzy_rule_antecedent_8h" kind="file"><name>FuzzyRuleAntecedent.h</name>
+    <member refid="_fuzzy_rule_antecedent_8h_1ac56577e3b08d3c7453db5d81d96bf05b" kind="define"><name>OP_AND</name></member>
+    <member refid="_fuzzy_rule_antecedent_8h_1ada17ceeb97ff33a840db0943f9821c5b" kind="define"><name>OP_OR</name></member>
+    <member refid="_fuzzy_rule_antecedent_8h_1a571487cc078aa463d635fa4753fa0528" kind="define"><name>MODE_FS</name></member>
+    <member refid="_fuzzy_rule_antecedent_8h_1a467ac7746282f6795773f151cd9ab833" kind="define"><name>MODE_FS_FS</name></member>
+    <member refid="_fuzzy_rule_antecedent_8h_1ad7169ae0c6b7c2458eebf0e2f2a7a3aa" kind="define"><name>MODE_FS_FRA</name></member>
+    <member refid="_fuzzy_rule_antecedent_8h_1a8877c73f252443432c46c24cccd6f5d0" kind="define"><name>MODE_FRA_FRA</name></member>
+  </compound>
+  <compound refid="_fuzzy_rule_consequent_8h" kind="file"><name>FuzzyRuleConsequent.h</name>
+  </compound>
+  <compound refid="_fuzzy_set_8h" kind="file"><name>FuzzySet.h</name>
+  </compound>
+  <compound refid="dir_26fb29e3dc7aa006416ef68260f1131f" kind="dir"><name>include/eFLL</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+</doxygenindex>

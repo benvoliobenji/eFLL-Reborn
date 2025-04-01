@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_set" kind="class" language="C++" prot="public">
+    <compoundname>FuzzySet</compoundname>
+    <includes refid="_fuzzy_set_8h" local="no">FuzzySet.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_set_1a52929210a00068a214f54bf98ccec31d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzySet::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <qualifiedname>FuzzySet::a</qualifiedname>
+        <briefdescription>
+<para>The first point of the shape. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="96" column="11" bodyfile="include/eFLL/FuzzySet.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_set_1a9afe45dbd967c050376d80cde61e0e2e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzySet::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <qualifiedname>FuzzySet::b</qualifiedname>
+        <briefdescription>
+<para>The second point of the shape. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="98" column="11" bodyfile="include/eFLL/FuzzySet.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_set_1a2aee457088a73483070af7031af7c125" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzySet::c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <qualifiedname>FuzzySet::c</qualifiedname>
+        <briefdescription>
+<para>The third point of the shape. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="100" column="11" bodyfile="include/eFLL/FuzzySet.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_set_1afa2b4740ff42a423173929a4f7212a98" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzySet::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>FuzzySet::d</qualifiedname>
+        <briefdescription>
+<para>The fourth point of the shape. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="102" column="11" bodyfile="include/eFLL/FuzzySet.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_set_1a5d18b75e7a58f9b9762208a82715d6ee" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzySet::pertinence</definition>
+        <argsstring></argsstring>
+        <name>pertinence</name>
+        <qualifiedname>FuzzySet::pertinence</qualifiedname>
+        <briefdescription>
+<para>The pertinence of the set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="104" column="11" bodyfile="include/eFLL/FuzzySet.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_set_1adc8ddf169f5107e01041818d620a6f4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzySet::FuzzySet</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzySet</name>
+        <qualifiedname>FuzzySet::FuzzySet</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a11122e9b25891edb0f104bc18fd53583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzySet::FuzzySet</definition>
+        <argsstring>(float a, float b, float c, float d)</argsstring>
+        <name>FuzzySet</name>
+        <qualifiedname>FuzzySet::FuzzySet</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_fuzzy" kindref="compound">Fuzzy</ref> Set object with provided points for a shape. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first point of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second point of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the third point of the shape. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the fourth point of the shape. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a666a7463476b53416f359c04788c6546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzySet::getPointA</definition>
+        <argsstring>()</argsstring>
+        <name>getPointA</name>
+        <qualifiedname>FuzzySet::getPointA</qualifiedname>
+        <briefdescription>
+<para>Get the location of point A (the first point of the shape). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the location of point A. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="38" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a6a42d77a13c776bf990a142e43cf43fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzySet::getPointB</definition>
+        <argsstring>()</argsstring>
+        <name>getPointB</name>
+        <qualifiedname>FuzzySet::getPointB</qualifiedname>
+        <briefdescription>
+<para>Get the location of point B (the second point of the shape). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the location of point B. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="45" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1adc75903db22b87b21c664791d61b24ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzySet::getPointC</definition>
+        <argsstring>()</argsstring>
+        <name>getPointC</name>
+        <qualifiedname>FuzzySet::getPointC</qualifiedname>
+        <briefdescription>
+<para>Get the location of point C (the third point of the shape). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the location of point C. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="52" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a72d7ace355eec68924189b10f8998964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzySet::getPointD</definition>
+        <argsstring>()</argsstring>
+        <name>getPointD</name>
+        <qualifiedname>FuzzySet::getPointD</qualifiedname>
+        <briefdescription>
+<para>Get the location of point D (the fourth point of the shape). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the location of point D. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="59" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a626b4eae4afe03f649b82cb5255b5757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzySet::calculatePertinence</definition>
+        <argsstring>(float crispValue)</argsstring>
+        <name>calculatePertinence</name>
+        <qualifiedname>FuzzySet::calculatePertinence</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>crispValue</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the pertinence of the set, according with the crispValue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">crispValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input value to calculate the pertinence of the set on. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a10832d85d41b1f53c0ad649d587403f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzySet::setPertinence</definition>
+        <argsstring>(float pertinence)</argsstring>
+        <name>setPertinence</name>
+        <qualifiedname>FuzzySet::setPertinence</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>pertinence</declname>
+        </param>
+        <briefdescription>
+<para>Set the pertinence of the set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will only set the pertinence if the provided pertinence is greater than the current pertinence.</para>
+</simplesect>
+The overriding to a higher pertinence is because this could be called more than once by different consequents, and the higher pertinence is the one that should be kept.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pertinence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new pertinence of the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="79" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1ae0ed5b9735586a3c1913cb4e265d36c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzySet::getPertinence</definition>
+        <argsstring>()</argsstring>
+        <name>getPertinence</name>
+        <qualifiedname>FuzzySet::getPertinence</qualifiedname>
+        <briefdescription>
+<para>Get the pertinence of the set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float The pertinence of the set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="86" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_set_1a73c5aac678c8035c4bfc698641e258eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzySet::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>FuzzySet::reset</qualifiedname>
+        <briefdescription>
+<para>Resets the pertinence of the set to 0.0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzySet.h" line="92" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class to manage a fuzzy set (shape) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/FuzzySet.h" line="17" column="1" bodyfile="include/eFLL/FuzzySet.h" bodystart="18" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_set_1a52929210a00068a214f54bf98ccec31d" prot="private" virt="non-virtual"><scope>FuzzySet</scope><name>a</name></member>
+      <member refid="class_fuzzy_set_1a9afe45dbd967c050376d80cde61e0e2e" prot="private" virt="non-virtual"><scope>FuzzySet</scope><name>b</name></member>
+      <member refid="class_fuzzy_set_1a2aee457088a73483070af7031af7c125" prot="private" virt="non-virtual"><scope>FuzzySet</scope><name>c</name></member>
+      <member refid="class_fuzzy_set_1a626b4eae4afe03f649b82cb5255b5757" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>calculatePertinence</name></member>
+      <member refid="class_fuzzy_set_1afa2b4740ff42a423173929a4f7212a98" prot="private" virt="non-virtual"><scope>FuzzySet</scope><name>d</name></member>
+      <member refid="class_fuzzy_set_1adc8ddf169f5107e01041818d620a6f4b" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>FuzzySet</name></member>
+      <member refid="class_fuzzy_set_1a11122e9b25891edb0f104bc18fd53583" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>FuzzySet</name></member>
+      <member refid="class_fuzzy_set_1ae0ed5b9735586a3c1913cb4e265d36c5" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>getPertinence</name></member>
+      <member refid="class_fuzzy_set_1a666a7463476b53416f359c04788c6546" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>getPointA</name></member>
+      <member refid="class_fuzzy_set_1a6a42d77a13c776bf990a142e43cf43fb" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>getPointB</name></member>
+      <member refid="class_fuzzy_set_1adc75903db22b87b21c664791d61b24ea" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>getPointC</name></member>
+      <member refid="class_fuzzy_set_1a72d7ace355eec68924189b10f8998964" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>getPointD</name></member>
+      <member refid="class_fuzzy_set_1a5d18b75e7a58f9b9762208a82715d6ee" prot="private" virt="non-virtual"><scope>FuzzySet</scope><name>pertinence</name></member>
+      <member refid="class_fuzzy_set_1a73c5aac678c8035c4bfc698641e258eb" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>reset</name></member>
+      <member refid="class_fuzzy_set_1a10832d85d41b1f53c0ad649d587403f4" prot="public" virt="non-virtual"><scope>FuzzySet</scope><name>setPertinence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

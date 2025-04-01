@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_rule" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyRule</compoundname>
+    <includes refid="_fuzzy_rule_8h" local="no">FuzzyRule.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_rule_1aba09b19b1f7b710f58ae8a7388a93c5a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FuzzyRule::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>FuzzyRule::index</qualifiedname>
+        <briefdescription>
+<para>The index of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="61" column="9" bodyfile="include/eFLL/FuzzyRule.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_1ad47e0513e0c93b9767d4c46317ee6f4e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FuzzyRule::fired</definition>
+        <argsstring></argsstring>
+        <name>fired</name>
+        <qualifiedname>FuzzyRule::fired</qualifiedname>
+        <briefdescription>
+<para>The state of the rule, if it was fired or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="63" column="10" bodyfile="include/eFLL/FuzzyRule.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_1a434e952f72b4c258c6fb65a0f8d77e40" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+        <definition>FuzzyRuleAntecedent* FuzzyRule::fuzzyRuleAntecedent</definition>
+        <argsstring></argsstring>
+        <name>fuzzyRuleAntecedent</name>
+        <qualifiedname>FuzzyRule::fuzzyRuleAntecedent</qualifiedname>
+        <briefdescription>
+<para>The antecedent of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="65" column="25" bodyfile="include/eFLL/FuzzyRule.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_1a4917582954da3ec618b51dfd79257009" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_rule_consequent" kindref="compound">FuzzyRuleConsequent</ref> *</type>
+        <definition>FuzzyRuleConsequent* FuzzyRule::fuzzyRuleConsequent</definition>
+        <argsstring></argsstring>
+        <name>fuzzyRuleConsequent</name>
+        <qualifiedname>FuzzyRule::fuzzyRuleConsequent</qualifiedname>
+        <briefdescription>
+<para>The consequent of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="67" column="25" bodyfile="include/eFLL/FuzzyRule.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_rule_1a82c36d3d2256395c5e55f060de0f78a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyRule::FuzzyRule</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyRule</name>
+        <qualifiedname>FuzzyRule::FuzzyRule</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_1a20be151e505fd40c585d9c9dc0a35971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyRule::FuzzyRule</definition>
+        <argsstring>(int index, FuzzyRuleAntecedent *fuzzyRuleAntecedent, FuzzyRuleConsequent *fuzzyRuleConsequent)</argsstring>
+        <name>FuzzyRule</name>
+        <qualifiedname>FuzzyRule::FuzzyRule</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_consequent" kindref="compound">FuzzyRuleConsequent</ref> *</type>
+          <declname>fuzzyRuleConsequent</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_fuzzy" kindref="compound">Fuzzy</ref> Rule object with a provided index, antecedent and consequent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The antecedent of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleConsequent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The consequent of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_1a5fdb8531055fd05684b483ec78d4329a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FuzzyRule::getIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getIndex</name>
+        <qualifiedname>FuzzyRule::getIndex</qualifiedname>
+        <briefdescription>
+<para>Get the Index of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int the index of the <ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="41" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_1a882794ac641944f55f1ec7d27b24fe4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRule::evaluateExpression</definition>
+        <argsstring>()</argsstring>
+        <name>evaluateExpression</name>
+        <qualifiedname>FuzzyRule::evaluateExpression</qualifiedname>
+        <briefdescription>
+<para>Evaluates the rule expression given the antecedent and consequent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the rule was fired. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the rule was not fired. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_1aebe83ed00f60f066ba1dc668130911fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRule::isFired</definition>
+        <argsstring>()</argsstring>
+        <name>isFired</name>
+        <qualifiedname>FuzzyRule::isFired</qualifiedname>
+        <briefdescription>
+<para>Check to see if the rule was fired. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the rule was fired. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the rule was not fired. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRule.h" line="57" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage fuzzy rules. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/FuzzyRule.h" line="21" column="1" bodyfile="include/eFLL/FuzzyRule.h" bodystart="22" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_rule_1a882794ac641944f55f1ec7d27b24fe4f" prot="public" virt="non-virtual"><scope>FuzzyRule</scope><name>evaluateExpression</name></member>
+      <member refid="class_fuzzy_rule_1ad47e0513e0c93b9767d4c46317ee6f4e" prot="private" virt="non-virtual"><scope>FuzzyRule</scope><name>fired</name></member>
+      <member refid="class_fuzzy_rule_1a82c36d3d2256395c5e55f060de0f78a1" prot="public" virt="non-virtual"><scope>FuzzyRule</scope><name>FuzzyRule</name></member>
+      <member refid="class_fuzzy_rule_1a20be151e505fd40c585d9c9dc0a35971" prot="public" virt="non-virtual"><scope>FuzzyRule</scope><name>FuzzyRule</name></member>
+      <member refid="class_fuzzy_rule_1a434e952f72b4c258c6fb65a0f8d77e40" prot="private" virt="non-virtual"><scope>FuzzyRule</scope><name>fuzzyRuleAntecedent</name></member>
+      <member refid="class_fuzzy_rule_1a4917582954da3ec618b51dfd79257009" prot="private" virt="non-virtual"><scope>FuzzyRule</scope><name>fuzzyRuleConsequent</name></member>
+      <member refid="class_fuzzy_rule_1a5fdb8531055fd05684b483ec78d4329a" prot="public" virt="non-virtual"><scope>FuzzyRule</scope><name>getIndex</name></member>
+      <member refid="class_fuzzy_rule_1aba09b19b1f7b710f58ae8a7388a93c5a" prot="private" virt="non-virtual"><scope>FuzzyRule</scope><name>index</name></member>
+      <member refid="class_fuzzy_rule_1aebe83ed00f60f066ba1dc668130911fc" prot="public" virt="non-virtual"><scope>FuzzyRule</scope><name>isFired</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_fuzzy_8h" kind="file" language="C++">
+    <compoundname>Fuzzy.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="_fuzzy_input_8h" local="yes">FuzzyInput.h</includes>
+    <includes refid="_fuzzy_output_8h" local="yes">FuzzyOutput.h</includes>
+    <includes refid="_fuzzy_rule_8h" local="yes">FuzzyRule.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/eFLL/Fuzzy.h</label>
+        <link refid="_fuzzy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>FuzzyComposition.h</label>
+        <link refid="_fuzzy_composition_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FuzzyIO.h</label>
+        <link refid="_fuzzy_i_o_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuzzyInput.h</label>
+        <link refid="_fuzzy_input_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FuzzyOutput.h</label>
+        <link refid="_fuzzy_output_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>FuzzyRule.h</label>
+        <link refid="_fuzzy_rule_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>FuzzyRuleAntecedent.h</label>
+        <link refid="_fuzzy_rule_antecedent_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>FuzzyRuleConsequent.h</label>
+        <link refid="_fuzzy_rule_consequent_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FuzzySet.h</label>
+        <link refid="_fuzzy_set_8h_source"/>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structfuzzy_input_array" prot="public">fuzzyInputArray</innerclass>
+    <innerclass refid="structfuzzy_output_array" prot="public">fuzzyOutputArray</innerclass>
+    <innerclass refid="structfuzzy_rule_array" prot="public">fuzzyRuleArray</innerclass>
+    <innerclass refid="class_fuzzy" prot="public">Fuzzy</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Robotic<sp/>Research<sp/>Group<sp/>(RRG)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>State<sp/>University<sp/>of<sp/>Piauí<sp/>(UESPI),<sp/>Brazil<sp/>-<sp/>Piauí<sp/>-<sp/>Teresina</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Fuzzy.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>AJ<sp/>Alves<sp/>&lt;aj.alves@zerokol.com&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Co<sp/>authors:<sp/>Dr.<sp/>Ricardo<sp/>Lira<sp/>&lt;ricardor_usp@yahoo.com.br&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msc.<sp/>Marvin<sp/>Lemos<sp/>&lt;marvinlemos@gmail.com&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Douglas<sp/>S.<sp/>Kridi<sp/>&lt;douglaskridi@gmail.com&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Kannya<sp/>Leal<sp/>&lt;kannyal@hotmail.com&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUZZY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUZZY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTING<sp/>NECESSARY<sp/>LIBRARIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FuzzyInput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FuzzyOutput.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FuzzyRule.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="structfuzzy_input_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfuzzy_input_array" kindref="compound">fuzzyInputArray</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="structfuzzy_input_array_1a9166f3862c58a4452a4bf6cad5341061" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_input" kindref="compound">FuzzyInput</ref>*<sp/><ref refid="structfuzzy_input_array_1a9166f3862c58a4452a4bf6cad5341061" kindref="member">fuzzyInput</ref>;</highlight></codeline>
+<codeline lineno="30" refid="structfuzzy_input_array_1a545f3874a160f6bae92d0259fb89fa79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_input_array" kindref="compound">fuzzyInputArray</ref>*<sp/><ref refid="structfuzzy_input_array_1a545f3874a160f6bae92d0259fb89fa79" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structfuzzy_output_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfuzzy_output_array" kindref="compound">fuzzyOutputArray</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structfuzzy_output_array_1afca8e67ac94d7292ccb44a44460fb570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>*<sp/><ref refid="structfuzzy_output_array_1afca8e67ac94d7292ccb44a44460fb570" kindref="member">fuzzyOutput</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structfuzzy_output_array_1a92035006790d8d5beb8ed5655676e945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_output_array" kindref="compound">fuzzyOutputArray</ref>*<sp/><ref refid="structfuzzy_output_array_1a92035006790d8d5beb8ed5655676e945" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structfuzzy_rule_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfuzzy_rule_array" kindref="compound">fuzzyRuleArray</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structfuzzy_rule_array_1a83c789d0af95720ee1f68dfa80c93ae2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>*<sp/><ref refid="structfuzzy_rule_array_1a83c789d0af95720ee1f68dfa80c93ae2" kindref="member">fuzzyRule</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structfuzzy_rule_array_1ae4f5eabe86df213bb007aafef8974ba2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_rule_array" kindref="compound">fuzzyRuleArray</ref>*<sp/><ref refid="structfuzzy_rule_array_1ae4f5eabe86df213bb007aafef8974ba2" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Main<sp/>class<sp/>of<sp/>this<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_fuzzy" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fuzzy_1a87eb15e0587a3003f970179afbc6043b" kindref="member">Fuzzy</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="class_fuzzy_1a87eb15e0587a3003f970179afbc6043b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_1a87eb15e0587a3003f970179afbc6043b" kindref="member">Fuzzy</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_fuzzy_1aaf4a559322e94153bf6085dd2e96e80e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_1aaf4a559322e94153bf6085dd2e96e80e" kindref="member">~Fuzzy</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_fuzzy_1a3249ff926ca45541906dd1865f13baaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1a3249ff926ca45541906dd1865f13baaa" kindref="member">addFuzzyInput</ref>(<ref refid="class_fuzzy_input" kindref="compound">FuzzyInput</ref>*<sp/>fuzzyInput);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_fuzzy_1a63dd6b88f43d4bf5c7465231a8f7eb4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1a63dd6b88f43d4bf5c7465231a8f7eb4a" kindref="member">addFuzzyOutput</ref>(<ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>*<sp/>fuzzyOutput);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="class_fuzzy_1ad0c66e89b0e3ebbe60373216e59d6039" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1ad0c66e89b0e3ebbe60373216e59d6039" kindref="member">addFuzzyRule</ref>(<ref refid="class_fuzzy_rule" kindref="compound">FuzzyRule</ref>*<sp/>fuzzyRule);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_fuzzy_1aa2732d9bef035d45df0c4a39510b786d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1aa2732d9bef035d45df0c4a39510b786d" kindref="member">setInput</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fuzzyInputIndex,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>crispValue);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_fuzzy_1aec44e9fc9cb94cf1332e144aa4a49ada" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1aec44e9fc9cb94cf1332e144aa4a49ada" kindref="member">fuzzify</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_fuzzy_1a318b00a3e4e8ce14b938d9f39758de61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1a318b00a3e4e8ce14b938d9f39758de61" kindref="member">isFiredRule</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fuzzyRuleIndex);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_fuzzy_1ac19899b207a6202e80ee695cc4750359" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_1ac19899b207a6202e80ee695cc4750359" kindref="member">defuzzify</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fuzzyOutputIndex);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_input_array" kindref="compound">fuzzyInputArray</ref>*<sp/>fuzzyInputs;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_output_array" kindref="compound">fuzzyOutputArray</ref>*<sp/>fuzzyOutputs;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_rule_array" kindref="compound">fuzzyRuleArray</ref>*<sp/>fuzzyRules;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanFuzzyInputs(<ref refid="structfuzzy_input_array" kindref="compound">fuzzyInputArray</ref>*<sp/>aux);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanFuzzyOutputs(<ref refid="structfuzzy_output_array" kindref="compound">fuzzyOutputArray</ref>*<sp/>aux);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanFuzzyRules(<ref refid="structfuzzy_rule_array" kindref="compound">fuzzyRuleArray</ref>*<sp/>aux);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/eFLL/Fuzzy.h"/>
+  </compounddef>
+</doxygen>

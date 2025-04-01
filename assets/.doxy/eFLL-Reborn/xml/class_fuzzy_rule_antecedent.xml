@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_rule_antecedent" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyRuleAntecedent</compoundname>
+    <includes refid="_fuzzy_rule_antecedent_8h" local="no">FuzzyRuleAntecedent.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1af02ca8a58611f54975955c40c469d19c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FuzzyRuleAntecedent::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <qualifiedname>FuzzyRuleAntecedent::op</qualifiedname>
+        <briefdescription>
+<para>The operator to use in the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="151" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1a2e500e4518916fc6e2f6e11be0f12363" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FuzzyRuleAntecedent::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>FuzzyRuleAntecedent::mode</qualifiedname>
+        <briefdescription>
+<para>The mode of the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="153" column="9" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1af5545b8a2005eb55bd4b6ccea04a770e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+        <definition>FuzzySet* FuzzyRuleAntecedent::fuzzySet1</definition>
+        <argsstring></argsstring>
+        <name>fuzzySet1</name>
+        <qualifiedname>FuzzyRuleAntecedent::fuzzySet1</qualifiedname>
+        <briefdescription>
+<para>The first <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> in the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="155" column="14" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1a486caae19650a3b4cec2128b93a3347b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+        <definition>FuzzySet* FuzzyRuleAntecedent::fuzzySet2</definition>
+        <argsstring></argsstring>
+        <name>fuzzySet2</name>
+        <qualifiedname>FuzzyRuleAntecedent::fuzzySet2</qualifiedname>
+        <briefdescription>
+<para>The second <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> in the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="157" column="14" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1adec4f4aac58e2b0f04612f2fce6be2fe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+        <definition>FuzzyRuleAntecedent* FuzzyRuleAntecedent::fuzzyRuleAntecedent1</definition>
+        <argsstring></argsstring>
+        <name>fuzzyRuleAntecedent1</name>
+        <qualifiedname>FuzzyRuleAntecedent::fuzzyRuleAntecedent1</qualifiedname>
+        <briefdescription>
+<para>The first <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> in the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="159" column="25" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_rule_antecedent_1a8a49488be1337f11279b999186f7edc3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+        <definition>FuzzyRuleAntecedent* FuzzyRuleAntecedent::fuzzyRuleAntecedent2</definition>
+        <argsstring></argsstring>
+        <name>fuzzyRuleAntecedent2</name>
+        <qualifiedname>FuzzyRuleAntecedent::fuzzyRuleAntecedent2</qualifiedname>
+        <briefdescription>
+<para>The second <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> in the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="161" column="25" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyRuleAntecedent::FuzzyRuleAntecedent</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyRuleAntecedent</name>
+        <qualifiedname>FuzzyRuleAntecedent::FuzzyRuleAntecedent</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1acdebc9498685bfa78a9b45de77f30855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinSingle</definition>
+        <argsstring>(FuzzySet *fuzzySet)</argsstring>
+        <name>joinSingle</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinSingle</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with only one set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (COLD)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> was added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> could not be added or was not valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a136711ec197daeb8eb59bb62bf829c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithAND</definition>
+        <argsstring>(FuzzySet *fuzzySet1, FuzzySet *fuzzySet2)</argsstring>
+        <name>joinWithAND</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithAND</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet2</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with two sets joined by an AND operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (COLD) AND (WINDY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzySets were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzySets could not be added or either were not valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a8d15d25c499e4cd265105ae7e8b674d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithOR</definition>
+        <argsstring>(FuzzySet *fuzzySet1, FuzzySet *fuzzySet2)</argsstring>
+        <name>joinWithOR</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithOR</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet2</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with two sets joined by an OR operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (COLD) OR (WINDY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzySets were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzySets could not be added or either were not valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithAND</definition>
+        <argsstring>(FuzzySet *fuzzySet, FuzzyRuleAntecedent *fuzzyRuleAntecedent)</argsstring>
+        <name>joinWithAND</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithAND</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with one set and one antecedent joined by an AND operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (COLD) AND (IF WINDY AND RAINY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> and <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> or <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> could not be added or were not valid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a569e451a4bf47f7ba60e2427ba419e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithAND</definition>
+        <argsstring>(FuzzyRuleAntecedent *fuzzyRuleAntecedent, FuzzySet *fuzzySet)</argsstring>
+        <name>joinWithAND</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithAND</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" kindref="member">Same as above but inverted</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithOR</definition>
+        <argsstring>(FuzzySet *fuzzySet, FuzzyRuleAntecedent *fuzzyRuleAntecedent)</argsstring>
+        <name>joinWithOR</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithOR</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with one set and one antecedent joined by an OR operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (COLD) OR (IF WINDY AND RAINY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fuzzy set to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> and <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> or <ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> could not be added or were not valid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a178ac5d346c7863ba0553b75a9848ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithOR</definition>
+        <argsstring>(FuzzyRuleAntecedent *fuzzyRuleAntecedent, FuzzySet *fuzzySet)</argsstring>
+        <name>joinWithOR</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithOR</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" kindref="member">Same as above but inverted</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="114" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a120870a0b07bf4c4793fc2b015be9784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithAND</definition>
+        <argsstring>(FuzzyRuleAntecedent *fuzzyRuleAntecedent1, FuzzyRuleAntecedent *fuzzyRuleAntecedent2)</argsstring>
+        <name>joinWithAND</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithAND</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent2</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with two antecedents joined by an AND operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (IF COLD AND WINDY) AND (IF WINDY AND RAINY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzyRuleAntecedents were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if the FuzzyRuleAntecedents could not be added or were not valid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="126" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1adbcd505f91e35e2b0af490bae61724a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyRuleAntecedent::joinWithOR</definition>
+        <argsstring>(FuzzyRuleAntecedent *fuzzyRuleAntecedent1, FuzzyRuleAntecedent *fuzzyRuleAntecedent2)</argsstring>
+        <name>joinWithOR</name>
+        <qualifiedname>FuzzyRuleAntecedent::joinWithOR</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fuzzy_rule_antecedent" kindref="compound">FuzzyRuleAntecedent</ref> *</type>
+          <declname>fuzzyRuleAntecedent2</declname>
+        </param>
+        <briefdescription>
+<para>Create an antecedent with two antecedents joined by an OR operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example result would be &quot;IF (IF COLD AND WINDY) OR (IF WINDY AND RAINY)&quot;</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzyRuleAntecedent2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second antecedent to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzyRuleAntecedents were added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the FuzzyRuleAntecedents could not be added or were not valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="138" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_rule_antecedent_1a412d1915bb0061152d430fbedfeacab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzyRuleAntecedent::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>FuzzyRuleAntecedent::evaluate</qualifiedname>
+        <briefdescription>
+<para>Calculates the pertinence of the antecedent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Relies on underlying FuzzySets to have their pertinence calculated first.</para>
+</simplesect>
+<simplesect kind="return"><para>float The pertinence of the antecedent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyRuleAntecedent.h" line="147" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage the antecedent of a fuzzy rule. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/FuzzyRuleAntecedent.h" line="41" column="1" bodyfile="include/eFLL/FuzzyRuleAntecedent.h" bodystart="42" bodyend="162"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_rule_antecedent_1a412d1915bb0061152d430fbedfeacab1" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>evaluate</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a20bd62fc801ab0cf9e81d7cca0b224da" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>FuzzyRuleAntecedent</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1adec4f4aac58e2b0f04612f2fce6be2fe" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>fuzzyRuleAntecedent1</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a8a49488be1337f11279b999186f7edc3" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>fuzzyRuleAntecedent2</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1af5545b8a2005eb55bd4b6ccea04a770e" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>fuzzySet1</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a486caae19650a3b4cec2128b93a3347b" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>fuzzySet2</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1acdebc9498685bfa78a9b45de77f30855" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinSingle</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a136711ec197daeb8eb59bb62bf829c5f" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithAND</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a291a2aef4c02d056300e77692e9a311f" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithAND</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a569e451a4bf47f7ba60e2427ba419e9e" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithAND</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a120870a0b07bf4c4793fc2b015be9784" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithAND</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a8d15d25c499e4cd265105ae7e8b674d9" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithOR</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a6d51cae2ef91224ff93bb0ec16aff4be" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithOR</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a178ac5d346c7863ba0553b75a9848ffb" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithOR</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1adbcd505f91e35e2b0af490bae61724a1" prot="public" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>joinWithOR</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1a2e500e4518916fc6e2f6e11be0f12363" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>mode</name></member>
+      <member refid="class_fuzzy_rule_antecedent_1af02ca8a58611f54975955c40c469d19c" prot="private" virt="non-virtual"><scope>FuzzyRuleAntecedent</scope><name>op</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

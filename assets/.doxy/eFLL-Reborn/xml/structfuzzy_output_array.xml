@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structfuzzy_output_array" kind="struct" language="C++" prot="public">
+    <compoundname>fuzzyOutputArray</compoundname>
+    <includes refid="_fuzzy_8h" local="no">Fuzzy.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfuzzy_output_array_1afca8e67ac94d7292ccb44a44460fb570" prot="public" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref> *</type>
+        <definition>FuzzyOutput* fuzzyOutputArray::fuzzyOutput</definition>
+        <argsstring></argsstring>
+        <name>fuzzyOutput</name>
+        <qualifiedname>fuzzyOutputArray::fuzzyOutput</qualifiedname>
+        <briefdescription>
+<para>Pointer to the current <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/Fuzzy.h" line="38" column="17" bodyfile="include/eFLL/Fuzzy.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfuzzy_output_array_1a92035006790d8d5beb8ed5655676e945" prot="public" static="no" mutable="no">
+        <type><ref refid="structfuzzy_output_array" kindref="compound">fuzzyOutputArray</ref> *</type>
+        <definition>fuzzyOutputArray* fuzzyOutputArray::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>fuzzyOutputArray::next</qualifiedname>
+        <briefdescription>
+<para>Pointer to the next <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref> in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/Fuzzy.h" line="40" column="22" bodyfile="include/eFLL/Fuzzy.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Linked list struct for <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref> objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>fuzzySets</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FuzzyOutput</label>
+        <link refid="class_fuzzy_output"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FuzzySet</label>
+        <link refid="class_fuzzy_set"/>
+      </node>
+      <node id="1">
+        <label>fuzzyOutputArray</label>
+        <link refid="structfuzzy_output_array"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fuzzyOutput</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fuzzySetArray</label>
+        <link refid="structfuzzy_set_array"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>fuzzySet</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/eFLL/Fuzzy.h" line="35" column="1" bodyfile="include/eFLL/Fuzzy.h" bodystart="36" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structfuzzy_output_array_1afca8e67ac94d7292ccb44a44460fb570" prot="public" virt="non-virtual"><scope>fuzzyOutputArray</scope><name>fuzzyOutput</name></member>
+      <member refid="structfuzzy_output_array_1a92035006790d8d5beb8ed5655676e945" prot="public" virt="non-virtual"><scope>fuzzyOutputArray</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

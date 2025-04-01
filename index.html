@@ -1,0 +1,1145 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A C++ library for fuzzy logic control and reasoning">
+      
+      
+        <meta name="author" content="Benjamin Vogel">
+      
+      
+      
+      
+        <link rel="next" href="eFLL-Reborn/links/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+    
+    
+      
+        <title>Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#efll-reborn-embedded-fuzzy-logic-library-reborn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)" class="md-header__button md-logo" aria-label="Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system default"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system default" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/benvoliobenji/eFLL-Reborn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="eFLL-Reborn/links/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  API
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)" class="md-nav__button md-logo" aria-label="Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Embedded Fuzzy Logic Library Reborn (eFLL-Reborn)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/benvoliobenji/eFLL-Reborn" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#whats-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Different?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What&#39;s Different?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c14" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMake
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actual-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actual Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the Same?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What&#39;s the Same?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#same-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#same-core-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same Core Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-using-cpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to install (using CPM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-general-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to install (general use)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brief-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-thanks-to-contributers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Thanks to Contributers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#original-efll-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Original eFLL Authors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      LICENSE
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Classes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Classes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/class_members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Members
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/class_member_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/class_member_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/class_member_typedefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/class_member_enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Class Member Enumerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Macros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eFLL-Reborn/files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="efll-reborn-embedded-fuzzy-logic-library-reborn">eFLL-Reborn (Embedded Fuzzy Logic Library Reborn)</h1>
+<p><img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/release/benvoliobenji/eFLL-Reborn" />
+<img alt="GitHub" src="https://img.shields.io/github/license/benvoliobenji/eFLL-Reborn" />
+<img alt="Code coverage" src="https://img.shields.io/codecov/c/github/benvoliobenji/eFLL-Reborn" /></p>
+<p>eFLL-Reborn is an updated take on the original <a href="https://github.com/alvesoaj/eFLL">eFLL</a> with the intention
+of bringing the abandoned library back to life with some needed quality-of-life
+improvements.</p>
+<h2 id="whats-different">What's Different?</h2>
+<p>The two largest differences is that the project now targets C++14 and the
+integration of CMake.</p>
+<h3 id="c14">C++14</h3>
+<p>The previous library, while only including <stdlib.h>, was always compiling in
+C++. As it wasn't a static library, it never <em>truly</em> supported C.</p>
+<p>I've dropped the pretense entirerly.</p>
+<p>eFLL-Reborn now targets C++14 as a library standard. Because most modern
+embedded compilers support a <em>minimum</em> of C++14, I'm targeting the lowest common
+denominator.</p>
+<h3 id="cmake">CMake</h3>
+<p>Packaging C++ libraries and applications has come a long way in the years since
+eFLL was published and abandoned. Now most C++ project leverage CMake at least
+to some extent.</p>
+<p>eFLL-Reborn takes the original implementation and wraps it in CMake, making it
+much easier to add to existing C++ applications already using CMake.</p>
+<h3 id="improvements">Improvements</h3>
+<p>Support for clang-tidy and clang-format have come to the library as well, which
+has highlighted <em>numerous</em> issues with the original eFLL. Reborn will clean up
+these issues as much as possible while retaining the original spirit and
+functionality of eFLL.</p>
+<h3 id="actual-support">Actual Support</h3>
+<p>Use of fuzzy logic in small, embedded packages is on the rise. I hope to foster
+a growing community of contributers and supporters to make embedded fuzzy logic
+easy for all developers and companies.</p>
+<h2 id="whats-the-same">What's the Same?</h2>
+<h3 id="same-api">Same API</h3>
+<p>One of the core philosophies I had while forking and maintaining this project
+was to make it easy to shift from the old eFLL library to Reborn.</p>
+<p>My intent is that the original API <strong>will not change</strong>.</p>
+<h3 id="same-core-infrastructure">Same Core Infrastructure</h3>
+<p>Similar to keeping the API, I hope to keep the general performance and behavior
+of the library on par if not better than the original eFLL.</p>
+<p>Favoring consistency and predictability over optimizations, Reborn intends to
+keep the core business logic intact.</p>
+<h2 id="characteristics">Characteristics</h2>
+<p>It has no explicit limitations on quantity of Fuzzy, Fuzzy Rules, Inputs or
+Outputs, these limited processing power and storage of each microcontroller</p>
+<p>It uses the process:</p>
+<p>(MAX-MIN) and (Mamdani Minimum) for inference and composition, (CENTER OF AREA)
+to defuzzification in a continuous universe.</p>
+<p>Tested with <a href="http://code.google.com/p/googletest/">GTest</a> for C, Google Inc.</p>
+<h2 id="development-setup">Development Setup</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Install <a href="https://releases.llvm.org/download.html">LLVM</a> - Version 18 or greater</li>
+<li>(Optional) Install <a href="https://visualstudio.microsoft.com/vs/features/cplusplus/">MSVC</a></li>
+<li>(Optional) Install <a href="https://gcc.gnu.org/">GCC</a></li>
+<li>Code Editor (VSCode suggested)</li>
+</ul>
+<p>The optional installs can be used to validate cross-compilation, but only
+<code>clang</code> is neccessary.</p>
+<h2 id="how-to-install-using-cpm">How to install (using CPM)</h2>
+<p>In whatever CMake file you add your third-party projects:</p>
+<pre><code class="language-text">CPMAddPackage(
+    NAME &quot;eFLL&quot;
+    GIT_REPOSITORY https://github.com/benvoliobenji/eFLL-Reborn
+    GIT_TAG {tag or branch}
+)
+</code></pre>
+<h2 id="how-to-install-general-use">How to install (general use)</h2>
+<p><strong>Step 1:</strong> Go to the official project page on GitHub (Here)</p>
+<p><strong>Step 2:</strong> Make a clone of the project using Git or download at Download on the
+button "Download as zip."</p>
+<p><strong>Step 3:</strong> Clone or unzip (For safety, rename the folder to "eFLL") the files
+into some folder</p>
+<p><strong>Step 4:</strong> Compile and link it to your code (See Makefile)</p>
+<h2 id="brief-documentation">Brief Documentation</h2>
+<p><img alt="Class Diagram" src="https://raw.githubusercontent.com/zerokol/eFLL/master/uml/class-diagram.png" /></p>
+<p><strong>Fuzzy object</strong> - This object includes all the Fuzzy System, through it, you
+can manipulate the Fuzzy Sets, Linguistic Rules, inputs and outputs.</p>
+<p><strong>FuzzyInput</strong> object - This object groups all entries Fuzzy Sets that belongs
+to the same domain.</p>
+<p><strong>FuzzyOutput</strong> object - This object is similar to FuzzyInput, is used to group
+all output Fuzzy Sets thar belongs to the same domain.</p>
+<p><strong>FuzzySet</strong> object - This is one of the main objects of Fuzzy Library, with
+each set is possible to model the system in question. Currently the library
+supports triangular membership functions, trapezoidal and singleton, which are
+assembled based on points A, B, C and D, they are passed by parameter in its
+constructor FuzzySet(float a, float b, float c, float d).</p>
+<p><strong>FuzzyRule</strong> object - This object is used to mount the base rule of Fuzzy
+object, which contains one or more of this object. Instantiated with FuzzyRule
+fr = new FuzzyRule (ID, antecedent, consequent).</p>
+<p><strong>FuzzyRuleAntecedent</strong> object - This object is used to compound the object
+FuzzyRule, responsible for assembling the antecedent of the conditional
+expression of a FuzzyRule.</p>
+<p><strong>FuzzyRuleConsequent</strong> object - This object is used to render the object
+FuzzyRule, responsible for assembling the output expression of a FuzzyRule.</p>
+<h2 id="tips">Tips</h2>
+<p>These are all eFLL library objects that are used in the process. The next step,
+generally interactive is handled by three methods of the Fuzzy Class first:</p>
+<p><code>bool setInput(int id, float value);</code></p>
+<p>It is used to pass the Crispe input value to the system note that the first
+parameter is the FuzzyInput object' ID which parameter value is intended.</p>
+<p><code>bool fuzzify();</code></p>
+<p>It is used to start the fuzzification process, composition and inference.</p>
+<p>And finally:</p>
+<p><code>float defuzzify(int id);</code></p>
+<h2 id="special-thanks-to-contributers">Special Thanks to Contributers</h2>
+<p><a href="https://github.com/benvoliobenji/">@benvoliobenji</a>,
+<a href="https://github.com/stanczyk4">@stanczyk4</a>,
+<a href="https://github.com/myrrlyn">@myrrlyn</a></p>
+<h2 id="original-efll-authors">Original eFLL Authors</h2>
+<p><strong>Authors:</strong> AJ Alves <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#106;&#46;&#97;&#108;&#118;&#101;&#115;&#64;&#122;&#101;&#114;&#111;&#107;&#111;&#108;&#46;&#99;&#111;&#109;">&#97;&#106;&#46;&#97;&#108;&#118;&#101;&#115;&#64;&#122;&#101;&#114;&#111;&#107;&#111;&#108;&#46;&#99;&#111;&#109;</a>; <strong>Co authors:</strong> Dr. Ricardo Lira
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#105;&#99;&#97;&#114;&#100;&#111;&#114;&#95;&#117;&#115;&#112;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#109;&#46;&#98;&#114;">&#114;&#105;&#99;&#97;&#114;&#100;&#111;&#114;&#95;&#117;&#115;&#112;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#109;&#46;&#98;&#114;</a>, Msc. Marvin Lemos <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#118;&#105;&#110;&#108;&#101;&#109;&#111;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#109;&#97;&#114;&#118;&#105;&#110;&#108;&#101;&#109;&#111;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>, Douglas
+S. Kridi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#111;&#117;&#103;&#108;&#97;&#115;&#107;&#114;&#105;&#100;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#111;&#117;&#103;&#108;&#97;&#115;&#107;&#114;&#105;&#100;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>, Kannya Leal <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#97;&#110;&#110;&#121;&#97;&#108;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#107;&#97;&#110;&#110;&#121;&#97;&#108;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<h2 id="license">LICENSE</h2>
+<p>MIT License</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["toc.integrate", "navigation.top", "navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.path", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

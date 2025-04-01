@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_fuzzy_i_o_8h" kind="file" language="C++">
+    <compoundname>FuzzyIO.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="_fuzzy_set_8h" local="yes">FuzzySet.h</includes>
+    <includedby refid="_fuzzy_input_8h" local="yes">include/eFLL/FuzzyInput.h</includedby>
+    <includedby refid="_fuzzy_output_8h" local="yes">include/eFLL/FuzzyOutput.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/eFLL/FuzzyIO.h</label>
+        <link refid="_fuzzy_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuzzySet.h</label>
+        <link refid="_fuzzy_set_8h_source"/>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/eFLL/Fuzzy.h</label>
+        <link refid="_fuzzy_8h_source"/>
+      </node>
+      <node id="1">
+        <label>include/eFLL/FuzzyIO.h</label>
+        <link refid="_fuzzy_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/eFLL/FuzzyInput.h</label>
+        <link refid="_fuzzy_input_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/eFLL/FuzzyOutput.h</label>
+        <link refid="_fuzzy_output_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structfuzzy_set_array" prot="public">fuzzySetArray</innerclass>
+    <innerclass refid="class_fuzzy_i_o" prot="public">FuzzyIO</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Robotic<sp/>Research<sp/>Group<sp/>(RRG)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>State<sp/>University<sp/>of<sp/>Piauí<sp/>(UESPI),<sp/>Brazil<sp/>-<sp/>Piauí<sp/>-<sp/>Teresina</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>FuzzyIO.h</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>AJ<sp/>Alves<sp/>&lt;aj.alves@zerokol.com&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Co<sp/>authors:<sp/>Dr.<sp/>Ricardo<sp/>Lira<sp/>&lt;ricardor_usp@yahoo.com.br&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msc.<sp/>Marvin<sp/>Lemos<sp/>&lt;marvinlemos@gmail.com&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Douglas<sp/>S.<sp/>Kridi<sp/>&lt;douglaskridi@gmail.com&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Kannya<sp/>Leal<sp/>&lt;kannyal@hotmail.com&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUZZYIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUZZYIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTING<sp/>NECESSARY<sp/>LIBRARIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;FuzzySet.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structfuzzy_set_array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="structfuzzy_set_array_1a46392b7abfb3f37f206e43391b41c35a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/><ref refid="structfuzzy_set_array_1a46392b7abfb3f37f206e43391b41c35a" kindref="member">fuzzySet</ref>;</highlight></codeline>
+<codeline lineno="27" refid="structfuzzy_set_array_1a1b80cdb958af0a2e67361dff9a0119b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref>*<sp/><ref refid="structfuzzy_set_array_1a1b80cdb958af0a2e67361dff9a0119b5" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_fuzzy_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" kindref="member">FuzzyIO</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" kindref="member">FuzzyIO</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" kindref="member">FuzzyIO</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" kindref="member">index</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" kindref="member">~FuzzyIO</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" kindref="member">getIndex</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" kindref="member">setCrispInput</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" kindref="member">crispInput</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" kindref="member">getCrispInput</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" kindref="member">addFuzzySet</ref>(<ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref>*<sp/>fuzzySet);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" kindref="member">resetFuzzySets</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="89" refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="91" refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" kindref="member">crispInput</ref>;</highlight></codeline>
+<codeline lineno="93" refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref>*<sp/><ref refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" kindref="member">fuzzySets</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" kindref="member">cleanFuzzySets</ref>(<ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref>*<sp/>aux);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/eFLL/FuzzyIO.h"/>
+  </compounddef>
+</doxygen>

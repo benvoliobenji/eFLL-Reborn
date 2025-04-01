@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_composition" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyComposition</compoundname>
+    <includes refid="_fuzzy_composition_8h" local="no">FuzzyComposition.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_composition_1ad3f411b773b0517b63844d1b2c743735" prot="private" static="no" mutable="no">
+        <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+        <definition>pointsArray* FuzzyComposition::points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <qualifiedname>FuzzyComposition::points</qualifiedname>
+        <briefdescription>
+<para>The head of the linked list of points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="101" column="17" bodyfile="include/eFLL/FuzzyComposition.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyComposition::FuzzyComposition</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyComposition</name>
+        <qualifiedname>FuzzyComposition::FuzzyComposition</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1aec737d15a3471aae75c0fc847296d398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyComposition::~FuzzyComposition</definition>
+        <argsstring>()</argsstring>
+        <name>~FuzzyComposition</name>
+        <qualifiedname>FuzzyComposition::~FuzzyComposition</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a9620bf01d814c7a25ffe5e8e21d71c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::addPoint</definition>
+        <argsstring>(float point, float pertinence)</argsstring>
+        <name>addPoint</name>
+        <qualifiedname>FuzzyComposition::addPoint</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pertinence</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new point and its pertinence to the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will malloc a new <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct and add it to the linked list of points. Uses the provided point and pertinence values to populate the new <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point to add to the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pertinence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pertinence of the point to add to the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point was added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point could not be added or memory could not be allocated to add the new point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a728351b9929ea7c0e48e263fa375e1aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::checkPoint</definition>
+        <argsstring>(float point, float pertinence)</argsstring>
+        <name>checkPoint</name>
+        <qualifiedname>FuzzyComposition::checkPoint</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pertinence</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a point and if its pertinence is in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>this checks for exact matches of the point and pertinence in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point to check for in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pertinence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pertinence of the point to check for in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point and pertinence are in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point and pertinence are not in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a2b7353428fb9c8335d057723c7394ba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::build</definition>
+        <argsstring>()</argsstring>
+        <name>build</name>
+        <qualifiedname>FuzzyComposition::build</qualifiedname>
+        <briefdescription>
+<para>Builds the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> by sorting the points in the list and correcting any intersections. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a5105427bee032ac9132fe8718b3bf185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzyComposition::calculate</definition>
+        <argsstring>()</argsstring>
+        <name>calculate</name>
+        <qualifiedname>FuzzyComposition::calculate</qualifiedname>
+        <briefdescription>
+<para>Calculates the centroid of the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the centroid of the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="81" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1ab65e5f10f014e496d5549aa50368a05b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <qualifiedname>FuzzyComposition::empty</qualifiedname>
+        <briefdescription>
+<para>Resets the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> by deallocating all points in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>will call free() on each <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct in the linked list of points.</para>
+</simplesect>
+<simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="90" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a94c6abd7d66acb3c661e1164c7df97e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FuzzyComposition::countPoints</definition>
+        <argsstring>()</argsstring>
+        <name>countPoints</name>
+        <qualifiedname>FuzzyComposition::countPoints</qualifiedname>
+        <briefdescription>
+<para>Counts the amount of points used in this <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int the amount of points in the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="97" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fuzzy_composition_1af96cd83420c863367beabfe1a9e5a5a9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzyComposition::cleanPoints</definition>
+        <argsstring>(pointsArray *aux)</argsstring>
+        <name>cleanPoints</name>
+        <qualifiedname>FuzzyComposition::cleanPoints</qualifiedname>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+<para>Recursively clean all <ref refid="structpoints_array" kindref="compound">pointsArray</ref> structs from memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>calls free() on the provided <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct and all of its children.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct in the linked list to clean up. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1ad86c0ee0d6c649b80dcd82d5dbb32125" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::rebuild</definition>
+        <argsstring>(pointsArray *aSegmentBegin, pointsArray *aSegmentEnd, pointsArray *bSegmentBegin, pointsArray *bSegmentEnd)</argsstring>
+        <name>rebuild</name>
+        <qualifiedname>FuzzyComposition::rebuild</qualifiedname>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>aSegmentBegin</declname>
+        </param>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>aSegmentEnd</declname>
+        </param>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>bSegmentBegin</declname>
+        </param>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>bSegmentEnd</declname>
+        </param>
+        <briefdescription>
+<para>Search intersection between two segments, if found, create a new <ref refid="structpoints_array" kindref="compound">pointsArray</ref> (in found intersection) and remove not necessary ones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aSegmentBegin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The beginning of the first segment to check for intersection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aSegmentEnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the first segment to check for intersection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bSegmentBegin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The beginning of the second segment to check for intersection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bSegmentEnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the second segment to check for intersection. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if an intersection was found and corrected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if no intersection was found. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_composition_1a14cbcde729cea1e0603c1528e177864b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyComposition::rmvPoint</definition>
+        <argsstring>(pointsArray *point)</argsstring>
+        <name>rmvPoint</name>
+        <qualifiedname>FuzzyComposition::rmvPoint</qualifiedname>
+        <param>
+          <type><ref refid="structpoints_array" kindref="compound">pointsArray</ref> *</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Remove a <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct from the linked list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structpoints_array" kindref="compound">pointsArray</ref> struct to remove from the linked list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyComposition.h" line="135" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class to manage the composition of points and pertinences for a <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/eFLL/FuzzyComposition.h" line="35" column="1" bodyfile="include/eFLL/FuzzyComposition.h" bodystart="36" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_composition_1a9620bf01d814c7a25ffe5e8e21d71c6e" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>addPoint</name></member>
+      <member refid="class_fuzzy_composition_1a2b7353428fb9c8335d057723c7394ba9" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>build</name></member>
+      <member refid="class_fuzzy_composition_1a5105427bee032ac9132fe8718b3bf185" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>calculate</name></member>
+      <member refid="class_fuzzy_composition_1a728351b9929ea7c0e48e263fa375e1aa" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>checkPoint</name></member>
+      <member refid="class_fuzzy_composition_1af96cd83420c863367beabfe1a9e5a5a9" prot="private" virt="non-virtual"><scope>FuzzyComposition</scope><name>cleanPoints</name></member>
+      <member refid="class_fuzzy_composition_1a94c6abd7d66acb3c661e1164c7df97e3" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>countPoints</name></member>
+      <member refid="class_fuzzy_composition_1ab65e5f10f014e496d5549aa50368a05b" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>empty</name></member>
+      <member refid="class_fuzzy_composition_1ab0df46c9237df0ebf76a1d2753b1f456" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>FuzzyComposition</name></member>
+      <member refid="class_fuzzy_composition_1ad3f411b773b0517b63844d1b2c743735" prot="private" virt="non-virtual"><scope>FuzzyComposition</scope><name>points</name></member>
+      <member refid="class_fuzzy_composition_1ad86c0ee0d6c649b80dcd82d5dbb32125" prot="private" virt="non-virtual"><scope>FuzzyComposition</scope><name>rebuild</name></member>
+      <member refid="class_fuzzy_composition_1a14cbcde729cea1e0603c1528e177864b" prot="private" virt="non-virtual"><scope>FuzzyComposition</scope><name>rmvPoint</name></member>
+      <member refid="class_fuzzy_composition_1aec737d15a3471aae75c0fc847296d398" prot="public" virt="non-virtual"><scope>FuzzyComposition</scope><name>~FuzzyComposition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

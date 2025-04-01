@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_output" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyOutput</compoundname>
+    <basecompoundref refid="class_fuzzy_i_o" prot="public" virt="non-virtual">FuzzyIO</basecompoundref>
+    <includes refid="_fuzzy_output_8h" local="no">FuzzyOutput.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fuzzy_output_1a7d19d7a7a197725ccc21296e5e18ce1f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> *</type>
+        <definition>FuzzyComposition* FuzzyOutput::fuzzyComposition</definition>
+        <argsstring></argsstring>
+        <name>fuzzyComposition</name>
+        <qualifiedname>FuzzyOutput::fuzzyComposition</qualifiedname>
+        <briefdescription>
+<para>The <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> object of the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="70" column="22" bodyfile="include/eFLL/FuzzyOutput.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_output_1a8f4d746ede5565826e71727be0b39e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyOutput::FuzzyOutput</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyOutput</name>
+        <qualifiedname>FuzzyOutput::FuzzyOutput</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a12fd52156301d3eb19ed306a6abfc16f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyOutput::FuzzyOutput</definition>
+        <argsstring>(int index)</argsstring>
+        <name>FuzzyOutput</name>
+        <qualifiedname>FuzzyOutput::FuzzyOutput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_fuzzy" kindref="compound">Fuzzy</ref> Output object with a provided index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a8a10db12eb128427c2b401461b66d66e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyOutput::~FuzzyOutput</definition>
+        <argsstring>()</argsstring>
+        <name>~FuzzyOutput</name>
+        <qualifiedname>FuzzyOutput::~FuzzyOutput</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a2e313d1c403695491e645fa437cbee10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyOutput::truncate</definition>
+        <argsstring>()</argsstring>
+        <name>truncate</name>
+        <qualifiedname>FuzzyOutput::truncate</qualifiedname>
+        <briefdescription>
+<para>Build and calculate the centroid of the fuzzy sets, leading to the crisp output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a26d3ee43ccaef6e424df3bdc93d05c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzyOutput::getCrispOutput</definition>
+        <argsstring>()</argsstring>
+        <name>getCrispOutput</name>
+        <qualifiedname>FuzzyOutput::getCrispOutput</qualifiedname>
+        <briefdescription>
+<para>Get the Crisp Output after a truncation process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the crisp output of the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="49" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a93a50f23187a36fecd0f52905bcb67a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyOutput::order</definition>
+        <argsstring>()</argsstring>
+        <name>order</name>
+        <qualifiedname>FuzzyOutput::order</qualifiedname>
+        <briefdescription>
+<para>Sort the fuzzy sets in the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref> by the reference of the point A in ascending order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is just a simple Bubble Sort.</para>
+<para><simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a8cbff745bb4272ab4ad74f6044b6dfd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> *</type>
+        <definition>FuzzyComposition * FuzzyOutput::getFuzzyComposition</definition>
+        <argsstring>()</argsstring>
+        <name>getFuzzyComposition</name>
+        <qualifiedname>FuzzyOutput::getFuzzyComposition</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="class_fuzzy" kindref="compound">Fuzzy</ref> Composition of all the fuzzy sets in the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>FuzzyComposition* a pointer to the <ref refid="class_fuzzy_composition" kindref="compound">FuzzyComposition</ref> object of the <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="66" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fuzzy_output_1aafcc891832ae3a773101003292418a6a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyOutput::swap</definition>
+        <argsstring>(fuzzySetArray *fuzzySetA, fuzzySetArray *fuzzySetB)</argsstring>
+        <name>swap</name>
+        <qualifiedname>FuzzyOutput::swap</qualifiedname>
+        <param>
+          <type><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> *</type>
+          <declname>fuzzySetA</declname>
+        </param>
+        <param>
+          <type><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> *</type>
+          <declname>fuzzySetB</declname>
+        </param>
+        <briefdescription>
+<para>Swap the references of two <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySetA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> to swap. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySetB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> to swap. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="79" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_output_1a6ca4f770551196e0fc577168f05ba7c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyOutput::rebuild</definition>
+        <argsstring>(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, float *point, float *pertinence)</argsstring>
+        <name>rebuild</name>
+        <qualifiedname>FuzzyOutput::rebuild</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x3</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y3</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x4</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y4</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pertinence</declname>
+        </param>
+        <briefdescription>
+<para>Rebuild some point, the new point is calculated finding the intersection between two lines. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the first point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the first point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the second point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the second point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the third point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the third point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate of the fourth point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate of the fourth point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pertinence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pertinence of the new point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point was rebuilt successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the point could not be rebuilt due to parallel lines. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyOutput.h" line="97" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage fuzzy outputs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+      </node>
+      <node id="1">
+        <label>FuzzyOutput</label>
+        <link refid="class_fuzzy_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>fuzzySets</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>FuzzyOutput</label>
+        <link refid="class_fuzzy_output"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FuzzySet</label>
+        <link refid="class_fuzzy_set"/>
+      </node>
+      <node id="3">
+        <label>fuzzySetArray</label>
+        <link refid="structfuzzy_set_array"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>fuzzySet</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/eFLL/FuzzyOutput.h" line="21" column="1" bodyfile="include/eFLL/FuzzyOutput.h" bodystart="22" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>addFuzzySet</name></member>
+      <member refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" prot="protected" virt="non-virtual"><scope>FuzzyOutput</scope><name>cleanFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" prot="protected" virt="non-virtual"><scope>FuzzyOutput</scope><name>crispInput</name></member>
+      <member refid="class_fuzzy_output_1a7d19d7a7a197725ccc21296e5e18ce1f" prot="private" virt="non-virtual"><scope>FuzzyOutput</scope><name>fuzzyComposition</name></member>
+      <member refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_output_1a8f4d746ede5565826e71727be0b39e92" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>FuzzyOutput</name></member>
+      <member refid="class_fuzzy_output_1a12fd52156301d3eb19ed306a6abfc16f" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>FuzzyOutput</name></member>
+      <member refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" prot="protected" virt="non-virtual"><scope>FuzzyOutput</scope><name>fuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>getCrispInput</name></member>
+      <member refid="class_fuzzy_output_1a26d3ee43ccaef6e424df3bdc93d05c86" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>getCrispOutput</name></member>
+      <member refid="class_fuzzy_output_1a8cbff745bb4272ab4ad74f6044b6dfd3" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>getFuzzyComposition</name></member>
+      <member refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>getIndex</name></member>
+      <member refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" prot="protected" virt="non-virtual"><scope>FuzzyOutput</scope><name>index</name></member>
+      <member refid="class_fuzzy_output_1a93a50f23187a36fecd0f52905bcb67a0" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>order</name></member>
+      <member refid="class_fuzzy_output_1a6ca4f770551196e0fc577168f05ba7c0" prot="private" virt="non-virtual"><scope>FuzzyOutput</scope><name>rebuild</name></member>
+      <member refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>resetFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>setCrispInput</name></member>
+      <member refid="class_fuzzy_output_1aafcc891832ae3a773101003292418a6a" prot="private" virt="non-virtual"><scope>FuzzyOutput</scope><name>swap</name></member>
+      <member refid="class_fuzzy_output_1a2e313d1c403695491e645fa437cbee10" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>truncate</name></member>
+      <member refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>~FuzzyIO</name></member>
+      <member refid="class_fuzzy_output_1a8a10db12eb128427c2b401461b66d66e" prot="public" virt="non-virtual"><scope>FuzzyOutput</scope><name>~FuzzyOutput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

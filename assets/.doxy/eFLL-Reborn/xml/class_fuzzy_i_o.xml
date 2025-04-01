@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_i_o" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyIO</compoundname>
+    <derivedcompoundref refid="class_fuzzy_input" prot="public" virt="non-virtual">FuzzyInput</derivedcompoundref>
+    <derivedcompoundref refid="class_fuzzy_output" prot="public" virt="non-virtual">FuzzyOutput</derivedcompoundref>
+    <includes refid="_fuzzy_i_o_8h" local="no">FuzzyIO.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FuzzyIO::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>FuzzyIO::index</qualifiedname>
+        <briefdescription>
+<para>The index of the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="89" column="9" bodyfile="include/eFLL/FuzzyIO.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FuzzyIO::crispInput</definition>
+        <argsstring></argsstring>
+        <name>crispInput</name>
+        <qualifiedname>FuzzyIO::crispInput</qualifiedname>
+        <briefdescription>
+<para>The crisp input value for the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="91" column="11" bodyfile="include/eFLL/FuzzyIO.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" prot="protected" static="no" mutable="no">
+        <type><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> *</type>
+        <definition>fuzzySetArray* FuzzyIO::fuzzySets</definition>
+        <argsstring></argsstring>
+        <name>fuzzySets</name>
+        <qualifiedname>FuzzyIO::fuzzySets</qualifiedname>
+        <briefdescription>
+<para>Linked list of <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="93" column="19" bodyfile="include/eFLL/FuzzyIO.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyIO::FuzzyIO</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyIO</name>
+        <qualifiedname>FuzzyIO::FuzzyIO</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyIO::FuzzyIO</definition>
+        <argsstring>(int index)</argsstring>
+        <name>FuzzyIO</name>
+        <qualifiedname>FuzzyIO::FuzzyIO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object with a provided index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyIO::~FuzzyIO</definition>
+        <argsstring>()</argsstring>
+        <name>~FuzzyIO</name>
+        <qualifiedname>FuzzyIO::~FuzzyIO</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FuzzyIO::getIndex</definition>
+        <argsstring>()</argsstring>
+        <name>getIndex</name>
+        <qualifiedname>FuzzyIO::getIndex</qualifiedname>
+        <briefdescription>
+<para>Get the current index of the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int the index of the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="52" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzyIO::setCrispInput</definition>
+        <argsstring>(float crispInput)</argsstring>
+        <name>setCrispInput</name>
+        <qualifiedname>FuzzyIO::setCrispInput</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>crispInput</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of the crisp input for this <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">crispInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The crisp input value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FuzzyIO::getCrispInput</definition>
+        <argsstring>()</argsstring>
+        <name>getCrispInput</name>
+        <qualifiedname>FuzzyIO::getCrispInput</qualifiedname>
+        <briefdescription>
+<para>Get the value of the crisp input for this <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float the crisp input value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="66" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyIO::addFuzzySet</definition>
+        <argsstring>(FuzzySet *fuzzySet)</argsstring>
+        <name>addFuzzySet</name>
+        <qualifiedname>FuzzyIO::addFuzzySet</qualifiedname>
+        <param>
+          <type><ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> *</type>
+          <declname>fuzzySet</declname>
+        </param>
+        <briefdescription>
+<para>Add a new <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> to the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>will malloc a new <ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> struct and add it to the linked list of fuzzySets. Uses the provided pointer to the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> object as the fuzzySet member of the new <ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> struct.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fuzzySet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> object to add to the <ref refid="class_fuzzy_i_o" kindref="compound">FuzzyIO</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> was added successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> could not be added or memory could not be allocated to add the new set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzyIO::resetFuzzySets</definition>
+        <argsstring>()</argsstring>
+        <name>resetFuzzySets</name>
+        <qualifiedname>FuzzyIO::resetFuzzySets</qualifiedname>
+        <briefdescription>
+<para>Resets all fuzzy sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="85" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuzzyIO::cleanFuzzySets</definition>
+        <argsstring>(fuzzySetArray *aux)</argsstring>
+        <name>cleanFuzzySets</name>
+        <qualifiedname>FuzzyIO::cleanFuzzySets</qualifiedname>
+        <param>
+          <type><ref refid="structfuzzy_set_array" kindref="compound">fuzzySetArray</ref> *</type>
+          <declname>aux</declname>
+        </param>
+        <briefdescription>
+<para>Recursively clean all <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> structs from memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">aux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> struct in the linked list to clean up. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyIO.h" line="100" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage fuzzy inputs and outputs. Base class for <ref refid="class_fuzzy_input" kindref="compound">FuzzyInput</ref> and <ref refid="class_fuzzy_output" kindref="compound">FuzzyOutput</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+      </node>
+      <node id="2">
+        <label>FuzzyInput</label>
+        <link refid="class_fuzzy_input"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuzzyOutput</label>
+        <link refid="class_fuzzy_output"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fuzzySets</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuzzySet</label>
+        <link refid="class_fuzzy_set"/>
+      </node>
+      <node id="2">
+        <label>fuzzySetArray</label>
+        <link refid="structfuzzy_set_array"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>fuzzySet</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/eFLL/FuzzyIO.h" line="31" column="1" bodyfile="include/eFLL/FuzzyIO.h" bodystart="32" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>addFuzzySet</name></member>
+      <member refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" prot="protected" virt="non-virtual"><scope>FuzzyIO</scope><name>cleanFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" prot="protected" virt="non-virtual"><scope>FuzzyIO</scope><name>crispInput</name></member>
+      <member refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" prot="protected" virt="non-virtual"><scope>FuzzyIO</scope><name>fuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>getCrispInput</name></member>
+      <member refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>getIndex</name></member>
+      <member refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" prot="protected" virt="non-virtual"><scope>FuzzyIO</scope><name>index</name></member>
+      <member refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>resetFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>setCrispInput</name></member>
+      <member refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" prot="public" virt="non-virtual"><scope>FuzzyIO</scope><name>~FuzzyIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

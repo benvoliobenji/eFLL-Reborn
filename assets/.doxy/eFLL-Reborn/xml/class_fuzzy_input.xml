@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fuzzy_input" kind="class" language="C++" prot="public">
+    <compoundname>FuzzyInput</compoundname>
+    <basecompoundref refid="class_fuzzy_i_o" prot="public" virt="non-virtual">FuzzyIO</basecompoundref>
+    <includes refid="_fuzzy_input_8h" local="no">FuzzyInput.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fuzzy_input_1a95d02feb26b9728518efbb18b011b53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyInput::FuzzyInput</definition>
+        <argsstring>()</argsstring>
+        <name>FuzzyInput</name>
+        <qualifiedname>FuzzyInput::FuzzyInput</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyInput.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_input_1a1671ee1c3496780e35e7199d573fa407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyInput::FuzzyInput</definition>
+        <argsstring>(int index)</argsstring>
+        <name>FuzzyInput</name>
+        <qualifiedname>FuzzyInput::FuzzyInput</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_fuzzy" kindref="compound">Fuzzy</ref> Input object with a provided index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="class_fuzzy_input" kindref="compound">FuzzyInput</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyInput.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_input_1ac8d87f79e8f3f7d593f37ffdd81982f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FuzzyInput::~FuzzyInput</definition>
+        <argsstring>()</argsstring>
+        <name>~FuzzyInput</name>
+        <qualifiedname>FuzzyInput::~FuzzyInput</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyInput.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fuzzy_input_1a593ceb7f2a8c579b69916fb116300b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FuzzyInput::calculateFuzzySetPertinences</definition>
+        <argsstring>()</argsstring>
+        <name>calculateFuzzySetPertinences</name>
+        <qualifiedname>FuzzyInput::calculateFuzzySetPertinences</qualifiedname>
+        <briefdescription>
+<para>Calculate the pertinence of all <ref refid="class_fuzzy_set" kindref="compound">FuzzySet</ref> objects in the <ref refid="class_fuzzy_input" kindref="compound">FuzzyInput</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/eFLL/FuzzyInput.h" line="41" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class to manage fuzzy inputs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+      </node>
+      <node id="1">
+        <label>FuzzyInput</label>
+        <link refid="class_fuzzy_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>FuzzyIO</label>
+        <link refid="class_fuzzy_i_o"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>fuzzySets</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>FuzzyInput</label>
+        <link refid="class_fuzzy_input"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FuzzySet</label>
+        <link refid="class_fuzzy_set"/>
+      </node>
+      <node id="3">
+        <label>fuzzySetArray</label>
+        <link refid="structfuzzy_set_array"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>fuzzySet</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/eFLL/FuzzyInput.h" line="20" column="1" bodyfile="include/eFLL/FuzzyInput.h" bodystart="21" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_fuzzy_i_o_1ab2e5201c23223914325791d16bb8283e" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>addFuzzySet</name></member>
+      <member refid="class_fuzzy_input_1a593ceb7f2a8c579b69916fb116300b5b" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>calculateFuzzySetPertinences</name></member>
+      <member refid="class_fuzzy_i_o_1a9b99cb2a20a48ac5c6591ec360a5362d" prot="protected" virt="non-virtual"><scope>FuzzyInput</scope><name>cleanFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1aece754474842af1ee65256b51f53658c" prot="protected" virt="non-virtual"><scope>FuzzyInput</scope><name>crispInput</name></member>
+      <member refid="class_fuzzy_input_1a95d02feb26b9728518efbb18b011b53b" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>FuzzyInput</name></member>
+      <member refid="class_fuzzy_input_1a1671ee1c3496780e35e7199d573fa407" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>FuzzyInput</name></member>
+      <member refid="class_fuzzy_i_o_1ae53035a2938d2b2ce2d1c5182403efad" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_i_o_1a3f36934ab64d91d946c17f1cf3554006" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>FuzzyIO</name></member>
+      <member refid="class_fuzzy_i_o_1aeaf2cbf0de9ab19b172694b0a0b4abb7" prot="protected" virt="non-virtual"><scope>FuzzyInput</scope><name>fuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a39a40d7fce1944f8fea875885fec5bcd" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>getCrispInput</name></member>
+      <member refid="class_fuzzy_i_o_1af11402da2db0e47065d37329f358fde1" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>getIndex</name></member>
+      <member refid="class_fuzzy_i_o_1aefe6b12aab03239733deacb17af336a1" prot="protected" virt="non-virtual"><scope>FuzzyInput</scope><name>index</name></member>
+      <member refid="class_fuzzy_i_o_1a53d08673329590b22b0dd98cbe4c7449" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>resetFuzzySets</name></member>
+      <member refid="class_fuzzy_i_o_1a3fd47fbc42666ea38422d9cc46cd716f" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>setCrispInput</name></member>
+      <member refid="class_fuzzy_input_1ac8d87f79e8f3f7d593f37ffdd81982f1" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>~FuzzyInput</name></member>
+      <member refid="class_fuzzy_i_o_1abd1ead062f9eebcf9f665c75a52fdb75" prot="public" virt="non-virtual"><scope>FuzzyInput</scope><name>~FuzzyIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
